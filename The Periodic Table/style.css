@@ -115,3 +115,10 @@ td
     background-color: transparent;
     border: 2px solid black;
 }
+
+td:not(.empty):not([colspan]):hover 
+{
+    background-color: blue !important;
+    transform: scale(1.1);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
