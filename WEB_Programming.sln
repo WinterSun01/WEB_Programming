@@ -3,11 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35303.130
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01-Intro", "01-Intro", "{7E0C8CA4-D7F9-487A-B9D6-7BA2DE309C9E}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01-Intro", "01-Intro", "{8D5C3FA6-CD33-45BA-A6C9-3F5BEE93A528}"
 	ProjectSection(SolutionItems) = preProject
-		intro.html = intro.html
-		lists.html = lists.html
-		style.css = style.css
+		01-Intro\intro.html = 01-Intro\intro.html
+		01-Intro\lists.html = 01-Intro\lists.html
+		01-Intro\style.css = 01-Intro\style.css
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02-CSS", "02-CSS", "{E904AF41-B558-4467-A012-11DDA4BB0CE4}"
+	ProjectSection(SolutionItems) = preProject
+		02-CSS\index.html = 02-CSS\index.html
+		02-CSS\style.css = 02-CSS\style.css
 	EndProjectSection
 EndProject
 Global

@@ -1,0 +1,104 @@
+﻿body {
+    /*font-family:sans-serif;*/
+    font-family: Roboto,sans-serif;
+}
+
+h1, h2, h3 {
+    font-weight: 800;
+    color: skyblue;
+    text-shadow: 25px 15px 2px darkblue, -25px -15px 2px blue;
+}
+
+p {
+    text-align: justify;
+    font-weight: 300;
+}
+
+.image {
+    border: solid, 1px;
+    text-align: center;
+}
+
+div > img {
+    /*width:50%;
+	height:auto;*/
+    /*align-self:center;*/
+}
+
+figcaption {
+    font-style: italic;
+}
+
+/*header was here*/
+.row-header, .row-header:hover {
+    background-color: cornflowerblue;
+    color: white;
+    width: 200px;
+    text-align: left;
+}
+
+    .row-header:hover {
+        font-weight: 800;
+    }
+
+table {
+    /*https://www.w3schools.com/cssref/css3_pr_box-shadow.php*/
+    border: solid;
+    border-spacing: 0;
+    border-radius: 5px;
+    margin: 0 auto;
+    /*box-shadow: 0px 0px 0px 50px;*/
+}
+
+    table:hover {
+        box-shadow: -5px 5px 25px 25px grey;
+    }
+
+tr {
+    border: solid,1px;
+}
+
+    tr:hover {
+        background-color: lightskyblue;
+        color: grey;
+    }
+
+th {
+    border: solid,1px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+td {
+    text-align: center;
+    border: solid,1px;
+}
+
+    td:hover {
+        background-color: cadetblue;
+        color: aliceblue;
+    }
+
+.header, .delimiter, .header:hover, .delimiter:hover {
+    background-color: cornflowerblue;
+    color: white;
+    /*height: 50px;*/
+}
+
+    .header:hover, .delimiter:hover {
+        box-shadow: inset 0px -5px 15px 0 green;
+    }
+
+.header {
+    height: 50px;
+}
+
+.delimiter {
+    height: 32px;
+}
+
+.cite {
+    text-align: right;
+    margin-left: 50px;
+    font-weight: 100;
+}

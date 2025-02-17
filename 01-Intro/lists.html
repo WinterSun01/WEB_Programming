@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+    <title></title>
+</head>
+<body>
+    <h1>Списки</h1>
+    ol - ordered list (нумерованный список);<br>
+    ul - unordered list (маркированный список);<br>
+    li - list item;<br>
+    <hr>
+    <h2>Нумерованные списки:</h2>
+
+    <ol class="color-list">
+        <li>Red;</li>
+        <li>Green;</li>
+        <li>Blue;</li>
+    </ol>
+    <ol type="A" class="color-list">
+        <li>Red;</li>
+        <li>Green;</li>
+        <li>Blue;</li>
+    </ol>
+    <ol type="I" start="9" class="color-list">
+        <li>
+            Red:
+            <ul type="square">
+                <li>Crimson</li>
+                <li>Scarlet</li>
+                <li>Ruby</li>
+                <li>Burgundy</li>
+            </ul>
+        </li>
+        <li>
+            Green;
+            <ul type="none">
+                <li>Emerald</li>
+                <li>Lime</li>
+                <li>Mint</li>
+            </ul>
+        </li>
+        <li>
+            Blue;
+            <ul type="disc">
+                <li>Aliceblue</li>
+                <li>Skyblue</li>
+                <li>Navy</li>
+                <li>Azure</li>
+            </ul>
+        </li>
+    </ol>
+
+    <h3>Alphabets:</h3>
+    <ul type="none">
+        <li>
+            Латинский:
+            <ol style="list-style-type:upper-alpha;">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ol>
+        </li>
+
+        <li>
+            Русский:
+            <ol style="list-style-type:lower-russian-full;">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ol>
+
+        </li>
+        <li>
+            Грузинский:
+            <ol id="geo">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ol>
+        </li>
+
+    </ul>
+
+    <hr>
+    <h2>Маркированные списки:</h2>
+    <ul style="list-style-image: url('ico/puzzle.png');" class="color-list">
+        <li>Red</li>
+        <li>Green</li>
+        <li>Blue</li>
+    </ul>
+    CSS - Cascade Style Sheet
+    CSS3
+</body>
+</html>
