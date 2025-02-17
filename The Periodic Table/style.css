@@ -110,7 +110,8 @@ td
     background-color: cyan;
 }
 
-.empty {
+.empty 
+{
     background-color: transparent;
     border: 2px solid black;
 }
