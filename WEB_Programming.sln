@@ -16,6 +16,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02-CSS", "02-CSS", "{E904AF
 		02-CSS\style.css = 02-CSS\style.css
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "The Periodic Table", "The Periodic Table", "{751F1FED-FB3A-456B-B152-738C1A650E3A}"
+	ProjectSection(SolutionItems) = preProject
+		The Periodic Table\main.html = The Periodic Table\main.html
+		The Periodic Table\style.css = The Periodic Table\style.css
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
