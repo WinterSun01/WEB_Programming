@@ -24,8 +24,8 @@ td
     padding: 20px;
     font-size: 18px;
     text-align: center;
-    border: 2px solid #ddd;
-    border-radius: 8px;
+    border: 2px solid black;
+    border-radius: 0px;
     transition: none;
 }
 
@@ -52,10 +52,10 @@ td
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid #bbb;
+    border: 2px solid black;
     font-weight: bold;
     font-size: 16px;
-    border-radius: 5px;
+    border-radius: 0px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     background-color: white;
 }
