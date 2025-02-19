@@ -22,11 +22,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "The Periodic Table", "The P
 		The Periodic Table\style.css = The Periodic Table\style.css
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03-Animation", "03-Animation", "{8951B568-018E-42E9-A92B-43DE68087301}"
-	ProjectSection(SolutionItems) = preProject
-		03-Animation\animations.css = 03-Animation\animations.css
-		03-Animation\animations.html = 03-Animation\animations.html
-	EndProjectSection
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03-Forms", "03-Forms", "{9E512FA5-EA75-4264-BF4E-89A444F77651}"
 EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
