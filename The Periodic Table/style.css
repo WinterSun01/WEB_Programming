@@ -12,6 +12,12 @@ h1
     margin-bottom: 20px;
 }
 
+h2 
+{
+    color: rgba(255, 255, 255, 0);
+    background-color: transparent;
+}
+
 table 
 {
     width: 90%;
@@ -35,20 +41,20 @@ td
         transform: none;
     }
 
-.periodic-table 
-{
+/* Сетка для периодической таблицы */
+.periodic-table {
     display: grid;
-    grid-template-columns: repeat(18, 1fr);
-    grid-gap: 10px;
-    max-width: 90%;
-    margin: 20px auto;
+    grid-template-columns: repeat(18, 1fr); /* 18 колонок */
+    grid-gap: 10px; /* Расстояние между элементами */
+    max-width: 90%; /* Ограничение ширины */
+    margin: 20px auto 50px; /* Центрирование и отступ снизу */
     padding: 20px;
-    grid-auto-rows: 80px;
-    grid-template-rows: repeat(7, 80px);
+    grid-auto-rows: 80px; /* Высота строк */
+    grid-template-rows: repeat(7, 80px); /* 7 строк */
 }
 
-.element 
-{
+/* Общие стили для ячеек с элементами */
+.element {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,65 +66,92 @@ td
     background-color: white;
 }
 
-.alkali-metals 
-{
-    background-color: red;
+/* Стили для различных групп элементов */
+.alkali-metals {
+    background-color: red; /* Щелочные металлы */
 }
 
-.alkaline-earth-metals 
-{
-    background-color: orange;
+.alkaline-earth-metals {
+    background-color: orange; /* Щелочноземельные металлы */
 }
 
-.transition-metals 
-{
-    background-color: yellow;
+.transition-metals {
+    background-color: yellow; /* Переходные металлы */
 }
 
-.post-transition-metals 
-{
-    background-color: lime;
+.post-transition-metals {
+    background-color: lime; /* Постпереходные металлы */
 }
 
-.semi-metals-metalloids 
-{
-    background-color: dodgerblue;
+.semi-metals-metalloids {
+    background-color: dodgerblue; /* Металлоиды */
 }
 
-.other-non-metals 
-{
-    background-color: mediumpurple;
+.other-non-metals {
+    background-color: mediumpurple; /* Другие неметаллы */
 }
 
-.halogens 
-{
-    background-color: firebrick;
+.halogens {
+    background-color: firebrick; /* Галогены */
 }
 
-.noble-gases 
-{
-    background-color: darkgray;
+.noble-gases {
+    background-color: darkgray; /* Благородные газы */
 }
 
-.lanthanides 
-{
-    background-color: hotpink;
+.lanthanides {
+    background-color: hotpink; /* Лантаноиды */
 }
 
-.actinides 
-{
-    background-color: cyan;
+.actinides {
+    background-color: cyan; /* Актиноиды */
 }
 
-.empty 
-{
-    background-color: transparent;
-    border: 2px solid black;
+/* Пустые ячейки */
+.empty {
+    background-color: transparent; /* Прозрачный фон */
+    border: 2px solid black; /* Граница */
 }
 
-td:not(.empty):not([colspan]):hover 
-{
-    background-color: blue !important;
-    transform: scale(1.1);
+/* Эффект при наведении (кроме пустых и объединенных ячеек) */
+td:not(.empty):not([colspan]):hover {
+    background-color: blue !important; /* Подсветка */
+    transform: scale(1.1); /* Увеличение элемента */
     transition: transform 0.2s ease, background-color 0.2s ease;
 }
+
+/* Подсветка элементов при наведении */
+.highlight {
+    outline: 3px solid black; /* Черная рамка */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7); /* Тень */
+    transform: scale(1.1); /* Увеличение */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Заголовок перед таблицей категорий */
+.category-title {
+    margin-top: 50px; /* Увеличенный отступ сверху */
+    font-size: 1.5em; /* Размер шрифта */
+    font-weight: bold; /* Жирный шрифт */
+}
+
+/* Стили для таблицы категорий */
+.category-table {
+    margin-top: 50px; /* Отступ сверху */
+}
+
+    .category-table td {
+        width: 150px; /* Ширина ячейки */
+        height: 50px; /* Высота ячейки */
+        text-align: center; /* Выравнивание текста */
+        font-weight: bold; /* Жирный шрифт */
+        cursor: pointer; /* Курсор в виде указателя */
+        border: 2px solid black; /* Граница */
+        background-color: white; /* Фон */
+        transition: background-color 0.3s ease; /* Анимация смены фона */
+    }
+
+        /* Подсветка категории при наведении */
+        .category-table td:hover {
+            background-color: lightgray;
+        }

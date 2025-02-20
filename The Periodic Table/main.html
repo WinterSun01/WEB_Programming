@@ -3,91 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <title>Таблица Менделеева</title>
-    <link rel="icon" href="ico/chemistry.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <h1>Периодическая система химических элементов Менделеева</h1>
 
-    <table>
-        <!-- Первая строка -->
+    <table class="periodic-table">
+        <!--Первая строка-->
         <tr>
-            <td class="other-non-metals">H<br>1</td> 
-            <td colspan="16"></td>
-            <td class="noble-gases">He<br>2</td>
-        </tr>
 
-        <!-- Вторая строка -->
+            <td class="noble-gases">1<br>H</td>
+            <td colspan="16" class="empty"></td>
+            <td class="noble-gases">2<br>He</td>
+        </tr>
+        <!--Вторая строка-->
         <tr>
-            <td class="alkali-metals">Li<br>3</td>
-            <td class="alkaline-earth-metals">Be<br>4</td>
-            <td colspan="10"></td>
-            <td class="semi-metals-metalloids">B<br>5</td>
-            <td class="other-non-metals">C<br>6</td>
-            <td class="other-non-metals">N<br>7</td>
-            <td class="other-non-metals">O<br>8</td>
-            <td class="halogens">F<br>9</td>
-            <td class="noble-gases">Ne<br>10</td>
-        </tr>
 
-        <!-- Третья строка -->
+            <td class="alkali-metals">3<br>Li</td>
+            <td class="alkaline-earth-metals">4<br>Be</td>
+            <td colspan="10" class="empty"></td>
+            <td class="semi-metals-metalloids">5<br>B</td>
+            <td class="other-non-metals">6<br>C</td>
+            <td class="other-non-metals">7<br>N</td>
+            <td class="other-non-metals">8<br>O</td>
+            <td class="halogens">9<br>F</td>
+            <td class="noble-gases">10<br>Ne</td>
+        </tr>
+        <!--Третья строка-->
         <tr>
-            <td class="alkali-metals">Na<br>11</td>
-            <td class="alkaline-earth-metals">Mg<br>12</td>
-            <td colspan="10"></td>
-            <td class="post-transition-metals">Al<br>13</td>
-            <td class="semi-metals-metalloids">Si<br>14</td>
-            <td class="other-non-metals">P<br>15</td>
-            <td class="other-non-metals">S<br>16</td>
-            <td class="halogens">Cl<br>17</td>
-            <td class="noble-gases">Ar<br>18</td>
-        </tr>
 
-        <!-- Четвертая строка -->
+            <td class="alkali-metals">11<br>Na</td>
+            <td class="alkaline-earth-metals">12<br>Mg</td>
+            <td colspan="10" class="empty"></td>
+            <td class="post-transition-metals">13<br>Al</td>
+            <td class="semi-metals-metalloids">14<br>Si</td>
+            <td class="other-non-metals">15<br>P</td>
+            <td class="other-non-metals">16<br>S</td>
+            <td class="halogens">17<br>Cl</td>
+            <td class="noble-gases">18<br>Ar</td>
+        </tr>
+        <!--Четвёртая строка-->
         <tr>
-            <td class="alkali-metals">K<br>19</td>
-            <td class="alkaline-earth-metals">Ca<br>20</td>
-            <td class="transition-metals">Sc<br>21</td>
-            <td class="transition-metals">Ti<br>22</td>
-            <td class="transition-metals">V<br>23</td>
-            <td class="transition-metals">Cr<br>24</td>
-            <td class="transition-metals">Mn<br>25</td>
-            <td class="transition-metals">Fe<br>26</td>
-            <td class="transition-metals">Co<br>27</td>
-            <td class="transition-metals">Ni<br>28</td>
-            <td class="transition-metals">Cu<br>29</td>
-            <td class="transition-metals">Zn<br>30</td>
-            <td class="post-transition-metals">Ga<br>31</td>
-            <td class="semi-metals-metalloids">Ge<br>32</td>
-            <td class="semi-metals-metalloids">As<br>33</td>
-            <td class="other-non-metals">Se<br>34</td>
-            <td class="halogens">Br<br>35</td>
-            <td class="noble-gases">Kr<br>36</td>
-        </tr>
 
-        <!-- Пятая строка -->
+            <td class="alkali-metals">19<br>K</td>
+            <td class="alkaline-earth-metals">20<br>Ca</td>
+            <td class="transition-metals">21<br>Sc</td>
+            <td class="transition-metals">22<br>Ti</td>
+            <td class="transition-metals">23<br>V</td>
+            <td class="transition-metals">24<br>Cr</td>
+            <td class="transition-metals">25<br>Mn</td>
+            <td class="transition-metals">26<br>Fe</td>
+            <td class="transition-metals">27<br>Co</td>
+            <td class="transition-metals">28<br>Ni</td>
+            <td class="transition-metals">29<br>Cu</td>
+            <td class="transition-metals">30<br>Zn</td>
+            <td class="post-transition-metals">31<br>Ga</td>
+            <td class="semi-metals-metalloids">32<br>Ge</td>
+            <td class="semi-metals-metalloids">33<br>As</td>
+            <td class="other-non-metals">34<br>Se</td>
+            <td class="halogens">35<br>Br</td>
+            <td class="noble-gases">36<br>Kr</td>
+        </tr>
+        <!--Пятая строка-->
         <tr>
-            <td class="alkali-metals">Rb<br>37</td>
-            <td class="alkaline-earth-metals">Sr<br>38</td>
-            <td class="transition-metals">Y<br>39</td>
-            <td class="transition-metals">Zr<br>40</td>
-            <td class="transition-metals">Nb<br>41</td>
-            <td class="transition-metals">Mo<br>42</td>
-            <td class="transition-metals">Tc<br>43</td>
-            <td class="transition-metals">Ru<br>44</td>
-            <td class="transition-metals">Rh<br>45</td>
-            <td class="transition-metals">Pd<br>46</td>
-            <td class="transition-metals">Ag<br>47</td>
-            <td class="transition-metals">Cd<br>48</td>
-            <td class="post-transition-metals">In<br>49</td>
-            <td class="post-transition-metals">Sn<br>50</td>
-            <td class="semi-metals-metalloids">Sb<br>51</td>
-            <td class="semi-metals-metalloids">Te<br>52</td>
-            <td class="halogens">I<br>53</td>
-            <td class="noble-gases">Xe<br>54</td>
-        </tr>
 
+            <td class="alkali-metals">37<br>Rb</td>
+            <td class="alkaline-earth-metals">38<br>Sr</td>
+            <td class="transition-metals">39<br>Y</td>
+            <td class="transition-metals">40<br>Zr</td>
+            <td class="transition-metals">41<br>Nb</td>
+            <td class="transition-metals">42<br>Mo</td>
+            <td class="transition-metals">43<br>Tc</td>
+            <td class="transition-metals">44<br>Ru</td>
+            <td class="transition-metals">45<br>Rh</td>
+            <td class="transition-metals">46<br>Pd</td>
+            <td class="transition-metals">47<br>Ag</td>
+            <td class="transition-metals">48<br>Cd</td>
+            <td class="post-transition-metals">49<br>In</td>
+            <td class="semi-metals-metalloids">50<br>Sn</td>
+            <td class="semi-metals-metalloids">51<br>Sb</td>
+            <td class="other-non-metals">52<br>Te</td>
+            <td class="halogens">53<br>I</td>
+            <td class="noble-gases">54<br>Xe</td>
+        </tr>
         <!-- Шестая строка -->
         <tr>
             <td class="alkali-metals">Cs<br>55</td>
@@ -109,7 +107,6 @@
             <td class="halogens">At<br>85</td>
             <td class="noble-gases">Rn<br>86</td>
         </tr>
-
         <!-- Седьмая строка -->
         <tr>
             <td class="alkali-metals">Fr<br>87</td>
@@ -135,44 +132,77 @@
         <!-- Лантаноиды -->
         <tr>
             <td colspan="2" style="text-align: center;">Лантаноиды*</td>
-            <td class="transition-metals">La<br>57</td>
-            <td class="lanthanides">Ce<br>58</td>
-            <td class="lanthanides">Pr<br>59</td>
-            <td class="lanthanides">Nd<br>60</td>
-            <td class="lanthanides">Pm<br>61</td>
-            <td class="lanthanides">Sm<br>62</td>
-            <td class="lanthanides">Eu<br>63</td>
-            <td class="lanthanides">Gd<br>64</td>
-            <td class="lanthanides">Tb<br>65</td>
-            <td class="lanthanides">Dy<br>66</td>
-            <td class="lanthanides">Ho<br>67</td>
-            <td class="lanthanides">Er<br>68</td>
-            <td class="lanthanides">Tm<br>69</td>
-            <td class="lanthanides">Yb<br>70</td>
-            <td class="lanthanides">Lu<br>71</td>
+            <td class="lanthanides">57<br>La</td>
+            <td class="lanthanides">58<br>Ce</td>
+            <td class="lanthanides">59<br>Pr</td>
+            <td class="lanthanides">60<br>Nd</td>
+            <td class="lanthanides">61<br>Pm</td>
+            <td class="lanthanides">62<br>Sm</td>
+            <td class="lanthanides">63<br>Eu</td>
+            <td class="lanthanides">64<br>Gd</td>
+            <td class="lanthanides">65<br>Tb</td>
+            <td class="lanthanides">66<br>Dy</td>
+            <td class="lanthanides">67<br>Ho</td>
+            <td class="lanthanides">68<br>Er</td>
+            <td class="lanthanides">69<br>Tm</td>
+            <td class="lanthanides">70<br>Yb</td>
+            <td class="lanthanides">71<br>Lu</td>
         </tr>
 
         <!-- Актиноиды -->
         <tr>
             <td colspan="2" style="text-align: center;">Актиноиды**</td>
-            <td class="transition-metals">Ac<br>89</td>
-            <td class="actinides">Th<br>90</td>
-            <td class="actinides">Pa<br>91</td>
-            <td class="actinides">U<br>92</td>
-            <td class="actinides">Np<br>93</td>
-            <td class="actinides">Pu<br>94</td>
-            <td class="actinides">Am<br>95</td>
-            <td class="actinides">Cm<br>96</td>
-            <td class="actinides">Bk<br>97</td>
-            <td class="actinides">Cf<br>98</td>
-            <td class="actinides">Es<br>99</td>
-            <td class="actinides">Fm<br>100</td>
-            <td class="actinides">Md<br>101</td>
-            <td class="actinides">No<br>102</td>
-            <td class="actinides">Lr<br>103</td>
+            <td class="actinides">89<br>Ac</td>
+            <td class="actinides">90<br>Th</td>
+            <td class="actinides">91<br>Pa</td>
+            <td class="actinides">92<br>U</td>
+            <td class="actinides">93<br>Np</td>
+            <td class="actinides">94<br>Pu</td>
+            <td class="actinides">95<br>Am</td>
+            <td class="actinides">96<br>Cm</td>
+            <td class="actinides">97<br>Bk</td>
+            <td class="actinides">98<br>Cf</td>
+            <td class="actinides">99<br>Es</td>
+            <td class="actinides">100<br>Fm</td>
+            <td class="actinides">101<br>Md</td>
+            <td class="actinides">102<br>No</td>
+            <td class="actinides">103<br>Lr</td>
         </tr>
-
     </table>
 
+    <!-- Таблица для категорий элементов -->
+    <h2>Группы элементов</h2>
+    <table class="category-table">
+        <tr>
+            <td onmouseover="highlightElements('alkali-metals')">Щелочные металлы</td>
+            <td onmouseover="highlightElements('alkaline-earth-metals')">Щелочноземельные металлы</td>
+            <td onmouseover="highlightElements('transition-metals')">Переходные металлы</td>
+            <td onmouseover="highlightElements('post-transition-metals')">Постпереходные металлы</td>
+            <td onmouseover="highlightElements('semi-metals-metalloids')">Металлоиды</td>
+            <td onmouseover="highlightElements('other-non-metals')">Другие неметаллы</td>
+            <td onmouseover="highlightElements('halogens')">Галогены</td>
+            <td onmouseover="highlightElements('noble-gases')">Благородные газы</td>
+            <td onmouseover="highlightElements('lanthanides')">Лантаноиды</td>
+            <td onmouseover="highlightElements('actinides')">Актиноиды</td>
+        </tr>
+    </table>
+
+    <!-- для подсветки элементов при наведении на группу -->
+    <script>
+        function highlightElements(category)
+        {
+            //убирается подсветка у всех элементов
+            document.querySelectorAll('.periodic-table td').forEach(el =>
+            {
+                el.classList.remove('highlight');
+            });
+
+            //добавляется подсветка элементам выбранной категории
+            document.querySelectorAll('.' + category).forEach(el =>
+            {
+                el.classList.add('highlight');
+            });
+        }
+    </script>
 </body>
 </html>
