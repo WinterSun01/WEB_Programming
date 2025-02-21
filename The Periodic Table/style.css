@@ -12,7 +12,7 @@ h1
     margin-bottom: 20px;
 }
 
-h2 
+h2, h3 
 {
     color: rgba(255, 255, 255, 0);
     background-color: transparent;
@@ -35,26 +35,35 @@ td
     transition: none;
 }
 
-    td:hover 
-    {
-        background-color: transparent;
-        transform: none;
-    }
-
-/* Сетка для периодической таблицы */
-.periodic-table {
-    display: grid;
-    grid-template-columns: repeat(18, 1fr); /* 18 колонок */
-    grid-gap: 10px; /* Расстояние между элементами */
-    max-width: 90%; /* Ограничение ширины */
-    margin: 20px auto 50px; /* Центрирование и отступ снизу */
-    padding: 20px;
-    grid-auto-rows: 80px; /* Высота строк */
-    grid-template-rows: repeat(7, 80px); /* 7 строк */
+td:hover 
+{
+    background-color: transparent;
+    transform: none;
 }
 
-/* Общие стили для ячеек с элементами */
-.element {
+th 
+{
+    padding: 10px;
+    font-size: 18px;
+    text-align: center;
+    border: 2px solid black;
+    background-color: white;
+}
+
+.periodic-table 
+{
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-gap: 10px;
+    max-width: 90%;
+    margin: 20px auto 50px;
+    padding: 20px;
+    grid-auto-rows: 80px;
+    grid-template-rows: repeat(7, 80px);
+}
+
+.element 
+{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -66,92 +75,110 @@ td
     background-color: white;
 }
 
-/* Стили для различных групп элементов */
-.alkali-metals {
-    background-color: red; /* Щелочные металлы */
+/* Щелочные металлы */
+.alkali-metals 
+{
+    background-color: red;
+}
+/* Щелочноземельные металлы */
+.alkaline-earth-metals 
+{
+    background-color: orange;
+}
+/* Переходные металлы */
+.transition-metals 
+{
+    background-color: yellow;
+}
+/* Постпереходные металлы */
+.post-transition-metals 
+{
+    background-color: lime;
+}
+/* Полуметаллы - металлоиды */
+.semi-metals-metalloids 
+{
+    background-color: dodgerblue;
+}
+/* Другие неметаллы */
+.other-non-metals 
+{
+    background-color: mediumpurple;
+}
+/* Галогены */
+.halogens 
+{
+    background-color: firebrick;
+}
+/* Благородные газы */
+.noble-gases 
+{
+    background-color: darkgray;
+}
+/* Лантаноиды */
+.lanthanides 
+{
+    background-color: hotpink;
+}
+/* Актиноиды */
+.actinides 
+{
+    background-color: cyan;
 }
 
-.alkaline-earth-metals {
-    background-color: orange; /* Щелочноземельные металлы */
+.empty 
+{
+    background-color: transparent;
+    border: 2px solid black;
 }
 
-.transition-metals {
-    background-color: yellow; /* Переходные металлы */
-}
-
-.post-transition-metals {
-    background-color: lime; /* Постпереходные металлы */
-}
-
-.semi-metals-metalloids {
-    background-color: dodgerblue; /* Металлоиды */
-}
-
-.other-non-metals {
-    background-color: mediumpurple; /* Другие неметаллы */
-}
-
-.halogens {
-    background-color: firebrick; /* Галогены */
-}
-
-.noble-gases {
-    background-color: darkgray; /* Благородные газы */
-}
-
-.lanthanides {
-    background-color: hotpink; /* Лантаноиды */
-}
-
-.actinides {
-    background-color: cyan; /* Актиноиды */
-}
-
-/* Пустые ячейки */
-.empty {
-    background-color: transparent; /* Прозрачный фон */
-    border: 2px solid black; /* Граница */
-}
-
-/* Эффект при наведении (кроме пустых и объединенных ячеек) */
-td:not(.empty):not([colspan]):hover {
-    background-color: blue !important; /* Подсветка */
-    transform: scale(1.1); /* Увеличение элемента */
+/* Эффект при наведении на элементы */
+td:not(.empty):not([colspan]):hover 
+{
+    background-color: blue !important;
+    transform: scale(1.1);
     transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 /* Подсветка элементов при наведении */
-.highlight {
-    outline: 3px solid black; /* Черная рамка */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7); /* Тень */
-    transform: scale(1.1); /* Увеличение */
+.highlight 
+{
+    outline: 3px solid black;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+    transform: scale(1.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Заголовок перед таблицей категорий */
-.category-title {
-    margin-top: 50px; /* Увеличенный отступ сверху */
-    font-size: 1.5em; /* Размер шрифта */
-    font-weight: bold; /* Жирный шрифт */
+.category-title 
+{
+    margin-top: 50px;
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
-/* Стили для таблицы категорий */
-.category-table {
-    margin-top: 50px; /* Отступ сверху */
+.category-table 
+{
+    margin-top: 100px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    clear: both;
 }
 
-    .category-table td {
-        width: 150px; /* Ширина ячейки */
-        height: 50px; /* Высота ячейки */
-        text-align: center; /* Выравнивание текста */
-        font-weight: bold; /* Жирный шрифт */
-        cursor: pointer; /* Курсор в виде указателя */
-        border: 2px solid black; /* Граница */
-        background-color: white; /* Фон */
-        transition: background-color 0.3s ease; /* Анимация смены фона */
-    }
+.category-table td 
+{
+    width: 180px;
+    height: 50px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid black;
+    background-color: white;
+    transition: background-color 0.3s ease;
+}
 
-        /* Подсветка категории при наведении */
-        .category-table td:hover {
-            background-color: lightgray;
-        }
+/* Подсветка категорий при наведении */
+.category-table td:hover 
+{
+    background-color: lightgray;
+}
