@@ -31,15 +31,28 @@
                    size="25"
                    minlength="5" maxlength="24">
         </div>
+
         <div>
             <label for="phone">Phone:</label>
             <input type="tel" placeholder="Введите Ваш телефон" name="phone" id="phone"
                    size="25"
                    minlength="5" maxlength="24">
         </div>
+
+        <div>
+            <label for="birth-date">Ваша дата рождения</label>
+            <input type="date">
+        </div>
+
         <div>
             <label for="brief">Пару слов о себе:</label><br>
             <textarea name="brief" id="brief" placeholder=""></textarea>
+        </div>
+
+        <div>
+            <img src="img/cat-astronaut.jpg" width="330" height="200"><br>
+            <label for="photo">Выберите фоточку</label>
+            <input type="file" accept="image/*">
         </div>
 
         <fieldset>
@@ -73,6 +86,19 @@
             <option value="FrontEnd">FrontEnd</option>
             <option value="BackEnd">BackEnd</option>
         </select>
+        <div>
+            <label for="weekdays">Выберите дни недели:</label><br>
+            <select multiple name="weekdays" id="weekdays">
+                <option disabled selected>Выберите дни недели</option>
+                <option value="Monday">Понедельник</option>
+                <option value="Tuesday">Вторник</option>
+                <option value="Wednesday">Среда</option>
+                <option value="Thursday">Четверг</option>
+                <option value="Friday">Пятница</option>
+                <option value="Saturday">Суббота</option>
+                <option value="Sunday">Воскресенье</option>
+            </select>
+        </div>
     </form>
 </body>
 </html>
