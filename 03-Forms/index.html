@@ -3,6 +3,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
     <title>Forms</title>
 </head>
 <body>
@@ -11,6 +12,7 @@
         <div>
             <label for="first_name">Name:</label>
             <input type="text" placeholder="Введите Ваше имя" name="first_name" id="first_name" required
+                   name="first_name" id="first_name" required
                    size="25"
                    minlength="3" maxlength="8"
                    pattern="^[A-Z][a-z]*">
@@ -31,12 +33,46 @@
         </div>
         <div>
             <label for="phone">Phone:</label>
-            <input type="n" placeholder="Введите Вашу почку" name="email" id="email"
+            <input type="tel" placeholder="Введите Ваш телефон" name="phone" id="phone"
                    size="25"
                    minlength="5" maxlength="24">
         </div>
+        <div>
+            <label for="brief">Пару слов о себе:</label><br>
+            <textarea name="brief" id="brief" placeholder=""></textarea>
+        </div>
 
+        <fieldset>
+            <legend>Какие языки Вы знаете?</legend>
+            <div><input type="checkbox" id="Russian">   <label for="Russian">Русский</label></div>
+            <div><input type="checkbox" id="English">   <label for="English">English</label></div>
+            <div><input type="checkbox" id="Deutsch">   <label for="Deutsch">Deutsch</label></div>
+            <div><input type="checkbox" id="Italiano">  <label for="Italiano">Italiano</label></div>
+            <div><input type="checkbox" id="Español">   <label for="Español">Español</label></div>
+            <div><input type="checkbox" id="Français">  <label for="Français">Français</label></div>
+            <div><input type="checkbox" id="한국어">     <label for="한국어">한국어</label></div>
+            <div><input type="checkbox" id="中文">       <label for="中文">中文</label></div>
+        </fieldset>
+        <fieldset>
+            <legend>Выберите форму обучения</legend>
+            <input type="radio" name="learning-form" id="stacionar"><label for="stacionar">Стационар</label><br>
+            <input type="radio" name="learning-form" id="semi-stacionar"><label for="semi-stacionar">Полустационар</label><br>
+            <input type="radio" name="learning-form" id="year-cources"><label for="year-cources">Годичные курсы</label><br>
+        </fieldset>
 
+        <label for="direction">Выберите направление обучения:</label><br>
+        <select name="direction" id="direction">
+            <option disabled>--- Выберите специальность ---</option>
+            <option>РПО</option>
+            <option>Сети</option>
+            <option>Графика</option>
+            <option>Java</option>
+            <option>Android</option>
+            <option>GameDev</option>
+            <option>WebDev</option>
+            <option>FrontEnd</option>
+            <option>BackEnd</option>
+        </select>
     </form>
 </body>
 </html>
