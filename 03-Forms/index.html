@@ -8,11 +8,10 @@
 </head>
 <body>
     <h1>Forms</h1>
-    <form action="handler.php" method="get">
+    <form action="handler.php" method="post">
         <div>
             <label for="first_name">Name:</label>
             <input type="text" placeholder="Введите Ваше имя" name="first_name" id="first_name" required
-                   name="first_name" id="first_name" required
                    size="25"
                    minlength="3" maxlength="8"
                    pattern="^[A-Z][a-z]*">
@@ -104,6 +103,23 @@
                 <option value="Sunday">Воскресенье</option>
             </select>
         </div>
+
+        <div>
+            <label for="learning-time">Выберите время обучения</label>
+            <input type="time">
+        </div>
+
+        <div>
+            <label for="meeting">Выберите удобное для Вас время встречи</label><br>
+            <input type="datetime-local" name="meeting" id="meeting">
+        </div>
+
+        <input type="week">
+        <input type="number" min="1" max="5">
+        <input type="range">
+        <input type="reset">
+        <input type="submit">
+
     </form>
 </body>
 </html>
