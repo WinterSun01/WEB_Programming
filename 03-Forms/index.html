@@ -7,119 +7,160 @@
     <title>Forms</title>
 </head>
 <body>
-    <h1>Forms</h1>
-    <form action="handler.php" method="post">
-        <div>
-            <label for="first_name">Name:</label>
-            <input type="text" placeholder="Введите Ваше имя" name="first_name" id="first_name" required
-                   size="25"
-                   minlength="3" maxlength="8"
-                   pattern="^[A-Z][a-z]*">
-        </div>
+    <main>
+        <h1>Forms</h1>
+        <form action="handler.php" method="post">
+            <div>
+                <label for="first_name">Name:</label>
+                <input type="text" placeholder="Введите Ваше имя" name="first_name" id="first_name" required
+                       size="25"
+                       minlength="3" maxlength="8"
+                       pattern="^[A-Z][a-z]*">
+            </div>
 
-        <div>
-            <label for="passwd">Password:</label>
-            <input type="password" placeholder="Введите пароль" name="passwd" id="passwd"
-                   size="25"
-                   minlength="8" maxlength="24">
-        </div>
+            <div>
+                <label for="passwd">Password:</label>
+                <input type="password" placeholder="Введите пароль" name="passwd" id="passwd"
+                       size="25"
+                       minlength="8" maxlength="24">
+            </div>
 
-        <div>
-            <label for="email">E-mail:</label>
-            <input type="email" placeholder="Введите Вашу почку" name="email" id="email"
-                   size="25"
-                   minlength="5" maxlength="24">
-        </div>
+            <div>
+                <label for="email">E-mail:</label>
+                <input type="email" placeholder="Введите Вашу почку" name="email" id="email"
+                       size="25"
+                       minlength="5" maxlength="24">
+            </div>
 
-        <div>
-            <label for="phone">Phone:</label>
-            <input type="tel" placeholder="Введите Ваш телефон" name="phone" id="phone"
-                   size="25"
-                   minlength="5" maxlength="24">
-        </div>
+            <div>
+                <label for="phone">Phone:</label>
+                <input type="tel" placeholder="Введите Ваш телефон" name="phone" id="phone"
+                       size="25"
+                       minlength="5" maxlength="24">
+            </div>
 
-        <div>
-            <label for="birth-date">Ваша дата рождения</label>
-            <input type="date">
-        </div>
+            <div>
+                <label for="birth-date">Ваша дата рождения</label>
+                <input type="date">
+            </div>
 
-        <div>
-            <label for="brief">Пару слов о себе:</label><br>
-            <textarea name="brief" id="brief" placeholder=""></textarea>
-        </div>
+            <div>
+                <label for="brief">Пару слов о себе:</label><br>
+                <textarea name="brief" id="brief" placeholder=""></textarea>
+            </div>
 
-        <div>
-            <img src="img/cat-astronaut.jpg" width="330" height="200"><br>
-            <label for="photo">Выберите фоточку</label>
-            <input type="file" accept="image/*">
-        </div>
+            <div>
+                <img src="img/cat-astronaut.jpg" width="330" height="200"><br>
+                <label for="photo">Выберите фоточку</label>
+                <input type="file" accept="image/*">
+            </div>
 
-        <div>
-            <label for="color">Выберите Ваш любимый цвет</label>
-            <input type="color">
-        </div>
+            <div>
+                <label for="color">Выберите Ваш любимый цвет</label>
+                <input type="color">
+            </div>
 
-        <fieldset>
-            <legend>Какие языки Вы знаете?</legend>
-            <div><input type="checkbox" id="Russian">   <label for="Russian">Русский</label></div>
-            <div><input type="checkbox" id="English">   <label for="English">English</label></div>
-            <div><input type="checkbox" id="Deutsch">   <label for="Deutsch">Deutsch</label></div>
-            <div><input type="checkbox" id="Italiano">  <label for="Italiano">Italiano</label></div>
-            <div><input type="checkbox" id="Español">   <label for="Español">Español</label></div>
-            <div><input type="checkbox" id="Français">  <label for="Français">Français</label></div>
-            <div><input type="checkbox" id="한국어">     <label for="한국어">한국어</label></div>
-            <div><input type="checkbox" id="中文">       <label for="中文">中文</label></div>
-        </fieldset>
-        <fieldset>
-            <legend>Выберите форму обучения</legend>
-            <input type="radio" name="learning-form" id="stacionar"><label for="stacionar">Стационар</label><br>
-            <input type="radio" name="learning-form" id="semi-stacionar"><label for="semi-stacionar">Полустационар</label><br>
-            <input type="radio" name="learning-form" id="year-cources"><label for="year-cources">Годичные курсы</label><br>
-        </fieldset>
+            <fieldset>
+                <legend>Какие языки Вы знаете?</legend>
+                <div><input type="checkbox" id="Russian">   <label for="Russian">Русский</label></div>
+                <div><input type="checkbox" id="English">   <label for="English">English</label></div>
+                <div><input type="checkbox" id="Deutsch">   <label for="Deutsch">Deutsch</label></div>
+                <div><input type="checkbox" id="Italiano">  <label for="Italiano">Italiano</label></div>
+                <div><input type="checkbox" id="Español">   <label for="Español">Español</label></div>
+                <div><input type="checkbox" id="Français">  <label for="Français">Français</label></div>
+                <div><input type="checkbox" id="한국어">     <label for="한국어">한국어</label></div>
+                <div><input type="checkbox" id="中文">       <label for="中文">中文</label></div>
+            </fieldset>
+            <fieldset>
+                <legend>Выберите форму обучения</legend>
+                <input type="radio" name="learning-form" id="stacionar"><label for="stacionar">Стационар</label><br>
+                <input type="radio" name="learning-form" id="semi-stacionar"><label for="semi-stacionar">Полустационар</label><br>
+                <input type="radio" name="learning-form" id="year-cources"><label for="year-cources">Годичные курсы</label><br>
+            </fieldset>
 
-        <label for="direction">Выберите направление обучения:</label><br>
-        <select name="direction" id="direction">
-            <option disabled selected>--- Выберите специальность ---</option>
-            <option value="RPO">РПО</option>
-            <option value="Networks">Сети</option>
-            <option value="Graphics">Графика</option>
-            <option value="Java">Java</option>
-            <option value="Android">Android</option>
-            <option value="GameDev">GameDev</option>
-            <option value="WebDev">WebDev</option>
-            <option value="FrontEnd">FrontEnd</option>
-            <option value="BackEnd">BackEnd</option>
-        </select>
-        <div>
-            <label for="weekdays">Выберите дни недели:</label><br>
-            <select multiple name="weekdays" id="weekdays">
-                <option disabled selected>Выберите дни недели</option>
-                <option value="Monday">Понедельник</option>
-                <option value="Tuesday">Вторник</option>
-                <option value="Wednesday">Среда</option>
-                <option value="Thursday">Четверг</option>
-                <option value="Friday">Пятница</option>
-                <option value="Saturday">Суббота</option>
-                <option value="Sunday">Воскресенье</option>
+            <label for="direction">Выберите направление обучения:</label><br>
+            <select name="direction" id="direction">
+                <option disabled selected>--- Выберите специальность ---</option>
+                <option value="RPO">РПО</option>
+                <option value="Networks">Сети</option>
+                <option value="Graphics">Графика</option>
+                <option value="Java">Java</option>
+                <option value="Android">Android</option>
+                <option value="GameDev">GameDev</option>
+                <option value="WebDev">WebDev</option>
+                <option value="FrontEnd">FrontEnd</option>
+                <option value="BackEnd">BackEnd</option>
             </select>
-        </div>
+            <div>
+                <label for="weekdays">Выберите дни недели:</label><br>
+                <select multiple name="weekdays" id="weekdays">
+                    <option disabled selected>Выберите дни недели</option>
+                    <option value="Monday">Понедельник</option>
+                    <option value="Tuesday">Вторник</option>
+                    <option value="Wednesday">Среда</option>
+                    <option value="Thursday">Четверг</option>
+                    <option value="Friday">Пятница</option>
+                    <option value="Saturday">Суббота</option>
+                    <option value="Sunday">Воскресенье</option>
+                </select>
+            </div>
 
-        <div>
-            <label for="learning-time">Выберите время обучения</label>
-            <input type="time">
-        </div>
+            <div>
+                <label for="learning-time">Выберите время обучения</label>
+                <input type="time">
+            </div>
 
-        <div>
-            <label for="meeting">Выберите удобное для Вас время встречи</label><br>
-            <input type="datetime-local" name="meeting" id="meeting">
-        </div>
+            <div>
+                <label for="meeting">Выберите удобное для Вас время встречи</label><br>
+                <input type="datetime-local" name="meeting" id="meeting">
+            </div>
+            <input type="week">
+            <input type="number" min="1" max="5">
+            <input type="range">
+            <div class="eula">
+                <h1>ЛИЦЕНЗИОННОЕ СОГЛАШЕНИЕ</h1>
 
-        <input type="week">
-        <input type="number" min="1" max="5">
-        <input type="range">
-        <input type="reset">
-        <input type="submit">
+                <h2>1. ОБЩИЕ ПОЛОЖЕНИЯ</h2>
 
-    </form>
+                <p><b>1.1. </b>Настоящее Лицензионное соглашение (далее – "Соглашение") регулирует отношения между Лицензиаром и Лицензиатом в отношении использования программного обеспечения (далее – "ПО").</p>
+
+                <p><b>1.2. </b>Установка, копирование или любое иное использование ПО означает полное и безоговорочное согласие Лицензиата с условиями настоящего Соглашения.</p>
+
+                <h2>2. ПРЕДОСТАВЛЕНИЕ ЛИЦЕНЗИИ</h2>
+
+                <p><b>2.1. </b>Лицензиар предоставляет Лицензиату неисключительное право на использование ПО в пределах, установленных настоящим Соглашением.</p>
+
+                <p><b>2.2. </b>Лицензиат не вправе:</p>
+                <ul>
+                    <li>изменять, модифицировать, декомпилировать, разбирать на исходный код или иным образом пытаться получить исходный код ПО;</li>
+                    <li>передавать права на использование ПО третьим лицам без письменного согласия Лицензиара;</li>
+                    <li>использовать ПО в целях, нарушающих законодательство.</li>
+                </ul>
+
+                <h2>3. ОГРАНИЧЕНИЕ ОТВЕТСТВЕННОСТИ</h2>
+
+                <p><b>3.1. </b>Лицензиар не несёт ответственности за возможный ущерб, причинённый в результате использования или невозможности использования ПО.</p>
+
+                <p><b>3.2. </b>Лицензиар не гарантирует бесперебойную и безошибочную работу ПО.</p>
+
+                <h2>4. СРОК ДЕЙСТВИЯ И РАСТОРЖЕНИЕ</h2>
+
+                <p><b>4.1. </b>Соглашение вступает в силу с момента установки или начала использования ПО и действует до его прекращения.</p>
+
+                <p><b>4.2. </b>Лицензиат может прекратить действие Соглашения в любое время, удалив ПО со своих устройств.</p>
+
+                <p><b>4.3. </b>Лицензиар вправе расторгнуть Соглашение в случае нарушения Лицензиатом его условий.</p>
+
+                <h2>5. ЗАКЛЮЧИТЕЛЬНЫЕ ПОЛОЖЕНИЯ</h2>
+
+                <p><b>5.1. </b>Настоящее Соглашение регулируется действующим законодательством.</p>
+
+                <p><b>5.2. </b>Все споры, возникающие в связи с настоящим Соглашением, подлежат урегулированию путём переговоров, а при невозможности достижения соглашения – в судебном порядке в соответствии с законодательством.</p>
+            </div>
+            <input type="reset">
+            <input type="submit">
+
+        </form>
+    </main>
 </body>
 </html>
