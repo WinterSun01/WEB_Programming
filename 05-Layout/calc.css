@@ -1,0 +1,30 @@
+﻿body
+{
+}
+#desktop
+{
+    width:98vw;
+    height:95vh;
+    background-color:darkgreen;
+    display:flex;
+    justify-content:center; /*выравнивание по горизонтали*/
+    align-items:center;     /*выравнивание по вертикали*/
+}
+.main-window
+{
+    width:520px;
+    height:520px;
+    /*border:solid 1px;*/
+}
+.title-bar
+{
+    background-color:blue;
+    height:32px;
+
+    border-radius:8px 8px 0 0;
+}
+.client-rect 
+{
+    background-color: #ebe9d8;
+    height:100%;
+}
