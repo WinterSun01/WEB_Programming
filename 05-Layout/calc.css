@@ -1,51 +1,56 @@
-﻿body {
+﻿body 
+{
 }
 
-#desktop {
-    /*https: //www.w3schools.com/cssref/css_units.php width:98vw;*/
-    /*height: 95vh;*/
+#desktop 
+{
     height: 600px;
-    /*background-color: darkgreen;*/
+    background-image: url("img/bliss.jpg");
+    background-size: 100% 100%;
     display: flex;
-    justify-content: center; /*Выравнивание по горизонтали*/
-    align-items: center; /*Выравнивание по вертикали*/
+    justify-content: center; /*выравнивание по горизонтали*/
+    align-items: center; /*выравнивание по вертикали*/
 }
 
-.main-window {
+.main-window 
+{
     width: 520px;
-    height: 520px;
-    /*border:solid 1px;*/
+    height: 420px;
     font-family: Tahoma;
 }
 
-.title-bar {
-    background-image: linear-gradient(#23AAFF, #0259e6,#0259e6,#0259e6,#0259e6, #0367fa, #0367fa, #0367fa, #0367fa,#2379ed);
-    height: 32px;
+.title-bar 
+{
+    background-image: linear-gradient(#23CCFF, #0259e6,#0259e6, #0367fa, #0367fa, #2379ed);
+    height: 48px;
     border-radius: 8px 8px 0 0;
     box-shadow: inset 0px 0px 4px 1px #002195;
     color: white;
     text-shadow: 1px 1px darkblue;
-    /**/
+    /*----------------------*/
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.icon {
+.icon 
+{
     width: 24px;
     height: 24px;
     margin: 8px;
 }
 
-.window-control-buttons, .window-title {
+.window-control-buttons, .window-title 
+{
     display: flex;
     align-items: center;
-    margin: 4px;
+    margin: 8px;
 }
 
-.window-control-button {
-    width: 24px;
-    height: 24px;
+.window-control-button 
+{
+    width: 32px;
+    height: 32px;
     margin: 1px;
     color: white;
     font-weight: 500;
@@ -55,88 +60,168 @@
     border-radius: 2px;
 }
 
-    .window-control-button:hover, button:disabled {
+    .window-control-button:hover, button:disabled, button:disabled:hover 
+    {
         border-color: lightgrey;
+        box-shadow: none;
     }
 
-    .window-control-button:active {
+    .window-control-button:active 
+    {
         border-color: gray;
     }
-/*button:disabled
+
+.close-button 
 {
-		border-color: lightgrey;
-}*/
-.close-button {
-    /*background-image: url("img/close_button.png");*/
     background-image: linear-gradient(to bottom right, #c97475, #c76042);
     box-shadow: inset 1px 1px 3px 1px #c49a9b;
 }
 
-.client-rect {
+.client-rect 
+{
     background-color: #ebe9d8;
     height: 100%;
-    /*border-left: solid 4px transparent;*/
     border: solid 5px;
     border-top: 0;
-    /*border-right: solid 4px transparent;
-	border-bottom: solid 4px transparent;*/
-    /*border-image: linear-gradient(to right, #0069fc, #008bfF, #0069fc);*/
     border-image: linear-gradient(to right, #0069fc, #55BbfF, #0069fc) 1 round;
     /*-----------------------------*/
     display: flex;
     flex-direction: column;
 }
 
-.menu-bar {
+    .client-rect > input[type=text] 
+    {
+        margin: 10px;
+        text-align: right;
+        font-size: 18px;
+    }
+
+.menu-bar 
+{
     box-shadow: 0px 1px 0px 0px white;
     padding: 2px;
 }
 
-    .menu-bar > input[type=button] {
+    .menu-bar > input[type=button] 
+    {
         border: none;
         background-color: transparent;
     }
 
-        .menu-bar > input[type=button]:hover {
+        .menu-bar > input[type=button]:hover 
+        {
             box-shadow: 0px 0px 0px 1px grey;
         }
 
-.client-rect > input[type=text] {
-    margin: 10px;
-    text-align: right;
-    font-size: 18px;
-}
-
-.display-buttons {
+.display-buttons 
+{
     display: flex;
-    margin: 10px;
+    justify-content: space-around;
 }
 
-    .display-buttons > div {
-        width: 40px;
-        height: 40px;
-        border: inset 2px;
-        margin: 5px 8px;
-    }
-
-    .display-buttons > button {
+    .display-buttons > button 
+    {
         width: 128px;
         color: red;
         margin: 8px 5px;
     }
-    #memory-buttons
-    {
-        width:50px;
-        margin:10px;
-        display:flex;
-        flex-direction:column;
-    }
-        #memory-buttons > button{
-            width:54px;
-            height:44px;
-            margin:5px 5px;
-        }
 
-        .debug {
-            border: solid 1px black;
-        }
+#square 
+{
+    width: 40px;
+    height: 40px;
+    border: inset 2px;
+    margin: 10px 10px;
+}
+
+#memory-buttons 
+{
+    width: 64px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    border: solid 1px;
+}
+
+    #memory-buttons > button 
+    {
+        width: 54px;
+        height: 44px;
+        margin: 5px 5px;
+        color: red;
+    }
+
+.buttons 
+{
+    display: flex;
+    flex-direction: row;
+    border: solid 1px;
+}
+
+#digits 
+{
+    display: grid;
+    grid-template-rows: repeat(4, 44px);
+    grid-template-columns: repeat(3, 54px);
+    grid-gap: 10px;
+    margin: 10px 5px;
+    padding: 5px;
+    border: solid 1px;
+}
+
+    #digits > button 
+    {
+        width: 54px;
+        height: 44px;
+        color: blue;
+    }
+
+#extra-buttons 
+{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 5px;
+}
+    #extra-buttons > button 
+    {
+        width: 54px;
+        height: 44px;
+        color: blue;
+    }
+
+#operations 
+{
+    display: grid;
+    grid-template-rows: repeat(4, 44px);
+    grid-template-columns: repeat(2, 64px);
+    grid-gap: 10px;
+    margin: 10px 5px;
+}
+
+    #operations > button 
+    {
+        width: 64px;
+        height: 44px;
+        color: red;
+    }
+button 
+{
+    border: solid 1px darkblue;
+    border-radius: 5px;
+    box-shadow: inset 0px -3px 5px 1px lightgrey;
+}
+
+    button:hover 
+    {
+        background-color: lightgray;
+    }
+
+    button:active 
+    {
+        box-shadow: inset 0px 0px 0px 1px grey;
+    }
+
+.debug 
+{
+    border: solid 1px black;
+}
