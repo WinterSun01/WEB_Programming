@@ -198,19 +198,6 @@
         color: blue;
     }
 
-#extra-buttons 
-{
-    display: flex;
-    justify-content: space-around;
-    margin: 10px 5px;
-}
-    #extra-buttons > button 
-    {
-        width: 54px;
-        height: 44px;
-        color: blue;
-    }
-
 #operations 
 {
     display: grid;
