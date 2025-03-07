@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Introduction to JavaScript</title>
+</head>
+<body>
+    <h1>Introduction to JavaScript</h1>
+    <h2>ECMA-script</h2>
+    <pre>
+        &lt;script&gt;
+            JavaScrit code here...
+            ...
+        &lt;/script&gt;
+    </pre>
+
+    <h2>Вывод на экран</h2>
+    <ol>
+        <li>
+            Модальные окна:
+            <ul>
+                <li><code>alert();      </code>//отображение модального окна сообщения (как в MessageBox())</li>
+                <li><code>prompt();     </code>//модальное окно со строкой ввода. Функция возвращает введённую строку</li>
+                <li><code>confirm();    </code>//модальное окно "Да", "Нет"</li>
+            </ul>
+        </li>
+        <li>
+            Вывод в консоль браузера:
+            <pre>console.log(.......)</pre>
+        </li>
+        <li><code>document.write();</code>//выводит данные непосредственно на страницу; <strong>DEPRECATED</strong></li>
+        <li>Вывод на страницу при помощи DOM - Document Object Model, методами <code>InnerHTML(), OuterHTML()....</code> </li>
+    </ol>
+    <h2>Строки</h2>
+    <ol>
+        <li>"string";</li>
+        <li>'string';</li>
+        <li>`Interpolated string`;</li>
+    </ol>
+    <h2>Переменные и типы данных</h2>
+    <ol>
+        <li><code>var</code> - объявляет переменную, создаёт глобальную переменную, независимости от того, в какой области видимости она объявлена;</li>
+        <li><code>let</code> - объявляет переменную, переменные созданные при помощи <code>let</code> существуют только в той области видимости, в которой они объявлены;</li>
+        <li><code>const</code> - объявляет константу, т.е. константы существуют только в той области видимости, в которой они объявлены;</li>
+    </ol>
+
+    <script>
+        //alert('Hello JS');
+        //prompt('Введите Ваше имя:');
+        //confirm('Вы уверены, ч то хотите продолжить?');
+
+        //alert('Hello, ' + prompt('Введите Ваше имя:') + '!');
+        /*var name = prompt('Введите Ваше имя: ');
+        console.log('Hello ' + name);
+        document.write('<h3>');
+        document.write('Имя пользователя: ');
+        document.write(name);
+        document.write('</h3>');
+        document.write(`Имя пользователя: ${name}.`);*/
+
+        document.write('<hr>');
+
+        //const PI = 3.14;
+        //{
+        //    var a = 2;
+        //    let b = 3;
+        //}
+        //document.write(a);
+        //document.write(b);
+        //document.write(PI);
+        document.write('<div style="display:flex;">');
+        for (var i = 0; i < 10; i++)
+        {
+            document.write(`<div style="width:50px;">${i}</div>`);
+        }
+        document.write('</div>');
+
+        document.write('<div style="display:flex;">');
+        let value = prompt("Введите что-нибудь: ");
+        for (; i < value; i++)
+        {
+            document.write(`<div style="width:50px;">${i}</div>`);
+        }
+        document.write('</div>');
+
+        document.write('<hr>');
+        document.write
+        (`Переменная <code>i</code> существует и здесь: ${i}, потому что она объявлена при помощи <code>var</code>`)
+
+        document.write('<hr>');
+        document.write(typeof (value));
+        document.write(value);
+    </script>
+</body>
+</html>

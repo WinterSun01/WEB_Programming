@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h1>DataTypes</h1>
+    <ol>
+        <li>
+            Логические типы:
+            <ul>
+                <li>Boolean (bool)</li>
+            </ul>
+        </li>
+        <li>
+            Числовые типы:
+            <ul>
+                <li>Number - это дробное число, размером 8 Byte (double). Любое число по умолчанию является Number.;</li>
+                <li>Bigint - это целое число, поддерживающее длинную арифметику. Значение типа BigInt можно создать при помощи конструктора класса BigInt(), либо же после указанного числового значения поставить 'n';</li>
+            </ul>
+        </li>
+        <li>
+            Символьные типы:
+            <ul>
+                <li>Symbol</li>
+            </ul>
+        </li>
+        <li>
+            Ссылочные типы:
+            <ul>
+                <li>String</li>
+                <li>Object</li>
+                <li>Null</li>
+            </ul>
+        </li>
+        <li>Undefined</li>
+    </ol>
+
+    <script>
+        //document.write(Boolean(""));
+        let a = prompt("Основание степени: ");
+        let n = prompt("Показатель степени: ");
+        document.write(a ** n);
+        //let n = prompt("Введите число:");
+        /*document.write("<h2>Factorial</h2>");
+        //n = BigInt(n);
+        let f = BigInt(1);
+        for (let i = 1; i <= n; i++)
+        {
+            f *= BigInt(i);
+            document.write(`${i}! = ${f};<br>`);
+        }
+        document.write(`<h3>${n}! = ${f};</h3>`);*/
+
+        //document.write('<div style="display:flex;">');
+        /*
+        document.write('<div">');
+        for (let i=0, a = 0n, b = 1n, c = a + b; i < n; i++, c = (a = b) + (b = c))
+            document.write(`<div style="width:50px;">${i}=${a}</div>`);
+        document.write('</div>');
+        */
+    </script>
+</body>
+</html>
