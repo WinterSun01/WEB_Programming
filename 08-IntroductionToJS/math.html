@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Математические вычисления</title>
+</head>
+<body>
+    <script>
+        document.write('<h2>Факториал</h2>');
+        let num = prompt('Введите число для вычисления факториала:');
+        let fact = 1;
+        for (let i = 2; i <= num; i++)
+        {
+            fact *= i;
+        }
+        document.write(`Факториал ${num} = ${fact}<br>`);
+
+        document.write('<h2>Возведение в степень</h2>');
+        let base = prompt('Введите основание:');
+        let stepen = prompt('Введите показатель степени:');
+        let result = Math.pow(base, stepen);
+        document.write(`${base}^${stepen} = ${result}<br>`);
+
+        document.write('<h2>Ряд Фибоначчи</h2>');
+        let limit = prompt('Введите предел для ряда Фибоначчи:');
+        let fib = [0, 1];
+        while (true)
+        {
+            let next = fib[fib.length - 1] + fib[fib.length - 2];
+            if (next > limit) break;
+            fib.push(next);
+        }
+        document.write(`Ряд Фибоначчи до ${limit}: ${fib.join(', ')}`);
+    </script>
+</body>
+</html>
