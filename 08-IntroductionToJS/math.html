@@ -7,13 +7,17 @@
 <body>
     <script>
         document.write('<h2>Факториал</h2>');
-        let num = prompt('Введите число для вычисления факториала:');
-        let fact = 1;
-        for (let i = 2; i <= num; i++)
+        let number = prompt('Введите число для вычисления факториала:');
+        let factorial = 1;
+        let process = '';
+
+        for (let i = 2; i <= number; i++)
         {
-            fact *= i;
+            factorial *= i;
+            process += (i === 2 ? i : ' × ' + i);
         }
-        document.write(`Факториал ${num} = ${fact}<br>`);
+
+        document.write(`Факториал ${number} = ${process} = ${factorial}<br>`);
 
         document.write('<h2>Возведение в степень</h2>');
         let base = prompt('Введите основание:');
