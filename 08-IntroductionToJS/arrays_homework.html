@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array Tasks</title>
+</head>
+<body>
+
+    <!--для массива из 5 элементов найти сумму, сред-арифм., мин. и макс. значение и массив нужно отсортировать-->
+
+    <h2>1. Операции с массивом из 5 элементов</h2>
+    <script>
+        let randomized = [];
+        for (let i = 0; i < 5; i++)
+        {
+            randomized.push(parseInt(Math.random() * 100) + 1);
+        }
+
+        let sum = 0;
+        for (let i = 0; i < randomized.length; i++)
+        {
+            sum += randomized[i];
+        }
+        let avg = sum / randomized.length;
+        let min = Math.min(...randomized);
+        let max = Math.max(...randomized);
+        let sortedArr = randomized.slice().sort((a, b) => a - b);
+
+        document.write(`<b>Массив:</b> ${randomized.join(' ')}<br>`);
+        document.write(`<b>Сумма элементов:</b> ${sum}<br>`);
+        document.write(`<b>Среднее-арифметическое:</b> ${avg}<br>`);
+        document.write(`<b>Минимальное значение:</b> ${min}<br>`);
+        document.write(`<b>Максимальное значение:</b> ${max}<br>`);
+        document.write(`<b>Отсортированный массив:</b> ${sortedArr.join(' ')}<br>`);
+    </script>
+
+    <!--массив из 10 элементов заполнить уник. случ. числами от 20 до 30-->
+
+    <h2>2. Уникальные случайные числа (20-30)</h2>
+    <script>
+        let uniqueArr = [];
+        while (uniqueArr.length < 10)
+        {
+            let num = parseInt(Math.random() * 11) + 20;
+            if (!uniqueArr.includes(num))
+            {
+                uniqueArr.push(num);
+            }
+        }
+        document.write(`<b>Уникальные числа:</b> ${uniqueArr.join(' ')}<br>`);
+    </script>
+
+    <!--массив из 10 элементов, значения могут повторяться, найти повторяющиеся значения, вывести на экран
+     их и кол-во повторений каждого значения-->
+
+    <h2>3. Найти повторяющиеся значения</h2>
+    <script>
+        let repeatArr = [5, 12, 5, 7, 12, 8, 9, 7, 10, 8];
+        let count = {};
+        for (let i = 0; i < repeatArr.length; i++)
+        {
+            let num = repeatArr[i];
+            count[num] = (count[num] || 0) + 1;
+        }
+
+        let duplicates = [];
+        for (let key in count)
+        {
+            if (count[key] > 1)
+            {
+                duplicates.push([key, count[key]]);
+            }
+        }
+        document.write(`<b>Массив:</b> ${repeatArr.join(' ')}<br>`);
+        document.write(`<b>Повторяющиеся элементы:</b><br>`);
+        for (let i = 0; i < duplicates.length; i++)
+        {
+            let [num, times] = duplicates[i];
+            document.write(`${num}: ${times} раз(а)<br>`);
+        }
+
+    </script>
+
+    <!--решение для двумерных массивов-->
+
+    <h2>4. Решение для двумерного массива</h2>
+    <script>
+        let multiArray =
+            [
+                [12, 5, 2],
+                [7, 18, 45],
+                [10, 2, 5]
+            ];
+
+        let multiArraySum = 0;
+        let multiArrayLength = 0;
+        let allElements = [];
+
+        // Считаем сумму всех элементов и находим все элементы для сортировки
+        for (let i = 0; i < multiArray.length; i++)
+        {
+            for (let j = 0; j < multiArray[i].length; j++)
+            {
+                multiArraySum += multiArray[i][j];
+                allElements.push(multiArray[i][j]);
+                multiArrayLength++;
+            }
+        }
+
+        let multiArrayAvg = multiArraySum / multiArrayLength;
+        let multiArrayMin = Math.min(...allElements);
+        let multiArrayMax = Math.max(...allElements);
+        let sortedMultiArray = [...allElements].sort((a, b) => a - b);
+
+        document.write(`<b>Двумерный массив:</b><br>`);
+        for (let i = 0; i < multiArray.length; i++)
+        {
+            document.write(`${multiArray[i].join(' ')}<br>`);
+        }
+
+        document.write(`<b>Сумма элементов:</b> ${multiArraySum}<br>`);
+        document.write(`<b>Среднее-арифметическое:</b> ${multiArrayAvg}<br>`);
+        document.write(`<b>Минимальное значение:</b> ${multiArrayMin}<br>`);
+        document.write(`<b>Максимальное значение:</b> ${multiArrayMax}<br>`);
+        document.write(`<b>Отсортированный массив:</b> ${sortedMultiArray.join(' ')}<br>`);
+    </script>
+
+
+
+    <!--ввести десятичное число, нужно перевести его в двоичный и шестнадцатеричный варианты-->
+
+    <h2>5. Перевод числа в двоичную и шестнадцатеричную системы</h2>
+    <script>
+        let decimal = parseInt(prompt("Введите число:"));
+        let binary = decimal.toString(2);
+        let hex = decimal.toString(16).toUpperCase();
+        document.write(`<b>Число:</b> ${decimal}<br>`);
+        document.write(`<b>Двоичное значение:</b> ${binary}<br>`);
+        document.write(`<b>Шестнадцатеричное значение:</b> ${hex}<br>`);
+    </script>
+
+</body>
+</html>

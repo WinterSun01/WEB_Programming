@@ -3,7 +3,8 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <link rel="stylesheet" href="datatypes.css">
+    <title>DataTypes & Operators</title>
 </head>
 <body>
     <h1>DataTypes</h1>
@@ -18,7 +19,10 @@
             Числовые типы:
             <ul>
                 <li>Number - это дробное число, размером 8 Byte (double). Любое число по умолчанию является Number.;</li>
-                <li>Bigint - это целое число, поддерживающее длинную арифметику. Значение типа BigInt можно создать при помощи конструктора класса BigInt(), либо же после указанного числового значения поставить 'n';</li>
+                <li>
+                    Bigint - это целое число, поддерживающее длинную арифметику.
+                    Значение типа BigInt можно создать при помощи конструктора класса BigInt(), либо же после указанного числового значения поставить 'n';
+                </li>
             </ul>
         </li>
         <li>
@@ -38,8 +42,57 @@
         <li>Undefined</li>
     </ol>
 
+    <h2>Operators</h2>
+    <ol>
+        <li>
+            Unary:
+            <ol>
+                <li>Arithmetical:<code>+, -</code></li>
+                <li>Increment/Decrement <code>(++/--)</code></li>
+            </ol>
+        </li>
+        <li>
+            Binary:
+            <ol>
+                <li>Arithmetical:<code>+,-,*,/,%,**</code> - оператор возведения в степень</li>
+                <li>Составные присваивания: <code>+=, -=, *=, /=, %=, **=</code></li>
+                <li>
+                    Операторы сравнения:
+                    <div style="font-family:'Courier New';">
+                        <ul style="list-style-type:none;">
+                            <li>==</li>
+                            <li>!=</li>
+                            <li>&gt;</li>
+                            <li>&lt;</li>
+                            <li>&gt;=</li>
+                            <li>&lt;=</li>
+                            <li>=== - строгое равно</li>
+                            <li>!== - строгое НЕравно</li>
+                        </ul>
+                    </div>
+                    Строгие сравнения кроме значений так же сравнивают еще и типы.
+                </li>
+            </ol>
+        </li>
+        <li>
+            Ternary: <code>condition ? value_1 : value_2 </code>
+        </li>
+    </ol>
+    <hr>
+    <h2>Type conversions</h2>
+
     <script>
-        document.write(Boolean(""));
+        //document.write(typeof (+prompt()));
+        //let input = Number(prompt());
+        let input = parseInt(prompt());
+        document.writeln(typeof (input));
+        document.writeln(input);
+        //document.write(typeof (Number(prompt())));
+        document.write("<hr>");
+        //document.write(Boolean(""));
+        /*let a = prompt("Основание степени: ");
+        let n = prompt("Показатель степени:");
+        document.write(a ** n);*/
         //let n = prompt("Введите число:");
         /*document.write("<h2>Factorial</h2>");
         //n = BigInt(n);
@@ -58,6 +111,10 @@
             document.write(`<div style="width:50px;">${i}=${a}</div>`);
         document.write('</div>');
         */
+        for (let i = 2; i < 2000000; i **= 2)
+            document.write(`<div>${i}</div>`);
+        document.write("<hr>");
+        document.write(2 === "5");
     </script>
 </body>
 </html>
