@@ -1,5 +1,4 @@
 ﻿<!DOCTYPE html>
-
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
@@ -15,32 +14,35 @@
     <div id="display_text"></div>
 
     <div style="display:grid; grid-gap:5px;">
-        <img    id="image" src="" alt="Выберите картинку" style="width:200px; height:200px; border:solid 1px;">
-        <input  id="file" type="file" onchange="set_image()">
+        <img id="image" src="" alt="Выберите картинку" style="width:300px; height:200px; border:solid 1px;">
+        <input id="file" type="file" onchange="set_image()">
     </div>
 
     <script>
         var i = 0;
-        function increment()
-        {
+        function increment() {
             i++;
-            //document.writeln(i);
             let number = document.getElementById("number");
-            number.innerHTML = `<h2>${i}</h2>`;
+            number.innerHTML = `<h2>${i}</h2>`;  // Исправление для корректной вставки HTML
         }
-        function show_text()
-        {
+
+        function show_text() {
             let text = document.getElementById("text");
             let display_text = document.getElementById("display_text");
-            //<debuger>
             display_text.innerHTML = text.value;
-            //alert();
         }
-        function set_image()
-        {
+
+        function set_image() {
             let image = document.getElementById("image");
-            let file = document.getElementById("file");
-            alert(file.value);
+            let path = document.getElementById("file");
+            let file = path.files[0];  // Получаем выбранный файл
+            if (file) {
+                let reader = new FileReader();
+                reader.onload = function (e) {
+                    image.src = e.target.result;  // Устанавливаем путь картинки как результат FileReader
+                };
+                reader.readAsDataURL(file);  // Читаем файл как Data URL
+            }
         }
     </script>
 </body>
