@@ -25,12 +25,12 @@
                     <input type="button" value="Вид">
                     <input type="button" value="Справка">
                 </div>
-                <input type="text" value="0.">
+                <input type="text" id="display" value="0" readonly>
                 <div class="display-buttons">
                     <div id="square"></div>
-                    <button>Backspace</button>
+                    <button onclick="backspace()">Backspace</button>
                     <button>CE</button>
-                    <button>C</button>
+                    <button onclick="clearAll()">C</button>
                 </div>
                 <div class="buttons">
                     <div id="memory-buttons">
@@ -39,33 +39,144 @@
                         <button>MS</button>
                         <button>M+</button>
                     </div>
+                    
                     <div id="digits">
-                        <button>7</button>
-                        <button>8</button>
-                        <button>9</button>
-                        <button>4</button>
-                        <button>5</button>
-                        <button>6</button>
-                        <button>1</button>
-                        <button>2</button>
-                        <button>3</button>
-                        <button>0</button>
-                        <button>+/-</button>
-                        <button>.</button>
+                        <button onclick="addNumber(7)">7</button>
+                        <button onclick="addNumber(8)">8</button>
+                        <button onclick="addNumber(9)">9</button>
+                        <button onclick="addNumber(4)">4</button>
+                        <button onclick="addNumber(5)">5</button>
+                        <button onclick="addNumber(6)">6</button>
+                        <button onclick="addNumber(1)">1</button>
+                        <button onclick="addNumber(2)">2</button>
+                        <button onclick="addNumber(3)">3</button>
+                        <button onclick="addNumber(0)">0</button>
+                        <button onclick="changeSign()">+/-</button>
+                        <button onclick="addDot()">.</button>
                     </div>
+                    
                     <div id="operations">
-                        <button>/</button>
-                        <button>*</button>
-                        <button>-</button>
-                        <button>+</button>
-                        <button>=</button>
-                        <button>sqrt</button>
-                        <button>%</button>
-                        <button>1/x</button>
+                        <button onclick="setOperator('/')">/</button>
+                        <button onclick="setOperator('*')">*</button>
+                        <button onclick="setOperator('-')">-</button>
+                        <button onclick="setOperator('+')">+</button>
+                        <button onclick="calculate()">=</button>
+                        <button onclick="squareRoot()">sqrt</button>
+                        <button onclick="percent()">%</button>
+                        <button onclick="reciprocalNumber()">1/x</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        let display = document.getElementById("display");
+        let firstOperand = null;
+        let currentOperator = null;
+        let resetDisplay = false;
+
+        //добав. цифры к дисплею
+        function addNumber(num)
+        {
+            if (display.value === "0" || resetDisplay)
+            {
+                display.value = num;
+                resetDisplay = false;
+            }
+            else
+            {
+                display.value += num;
+            }
+        }
+
+        //добав. десятичной точки
+        function addDot()
+        {
+            if (!display.value.includes("."))
+            {
+                display.value += ".";
+            }
+        }
+
+        //перекл. знака у числа (+/-)
+        function changeSign()
+        {
+            if (display.value.startsWith("-"))
+            {
+                display.value = display.value.slice(1);
+            }
+            else
+            {
+                display.value = "-" + display.value;
+            }
+        }
+
+        //уст. оператора (+, -, *, /)
+        function setOperator(operator)
+        {
+            firstOperand = parseFloat(display.value);
+            currentOperator = operator;
+            resetDisplay = true;
+        }
+
+        //вычисл. результата
+        function calculate()
+        {
+            if (currentOperator && firstOperand !== null)
+            {
+                let secondOperand = parseFloat(display.value);
+                switch (currentOperator)
+                {
+                    case '+': display.value = firstOperand + secondOperand; break;
+                    case '-': display.value = firstOperand - secondOperand; break;
+                    case '*': display.value = firstOperand * secondOperand; break;
+                    case '/': display.value = secondOperand !== 0 ? firstOperand / secondOperand : "ОШИБКА"; break;
+                }
+                currentOperator = null;
+                firstOperand = null;
+                resetDisplay = true;
+            }
+        }
+
+        //очищение дисплея (C)
+        function clearAll()
+        {
+            display.value = "0";
+            currentOperator = null;
+            firstOperand = null;
+            resetDisplay = false;
+        }
+
+        //удаление последнего символа (backspace)
+        function backspace()
+        {
+            display.value = display.value.slice(0, -1) || "0";
+        }
+
+        //вычисление квадратного корня (sqrt)
+        function squareRoot()
+        {
+            let value = parseFloat(display.value);
+            if (value < 0)
+            {
+                display.value = "ОШИБКА";
+                return;
+            }
+            display.value = Math.sqrt(value);
+        }
+
+        //процента от числа (%)
+        function percent()
+        {
+            display.value = parseFloat(display.value) / 100;
+        }
+
+        //вычисление обратного значения числа (1/x)
+        function reciprocalNumber()
+        {
+            let value = parseFloat(display.value);
+            display.value = value !== 0 ? 1 / value : "ОШИБКА";
+        }
+    </script>
 </body>
 </html>
