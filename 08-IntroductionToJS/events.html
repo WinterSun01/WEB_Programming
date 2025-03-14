@@ -1,4 +1,5 @@
 ﻿<!DOCTYPE html>
+
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
@@ -6,43 +7,52 @@
 </head>
 <body>
     <h1>Events</h1>
-    <div id="number" style="width:100px; height:50px;background-color:lightblue;" onclick="increment()">
+    <div id="number" style="width:100px;height:50px;background-color:lightblue;" onclick="increment()">
     </div>
 
-    <input id="text" type="text" oninput="show_text()">
+    <input id="text" type="text" oninput="show_text()" />
     <input id="show" type="button" value="Show">
     <div id="display_text"></div>
 
     <div style="display:grid; grid-gap:5px;">
-        <img id="image" src="" alt="Выберите картинку" style="width:300px; height:200px; border:solid 1px;">
-        <input id="file" type="file" onchange="set_image()">
+        <img id="image" src="" alt="Выберите картинку" style="width:200px;height:200px; border:solid 1px;">
+        <input id="file" type="file" onchange="set_image()" value="C:\" />
     </div>
 
     <script>
         var i = 0;
-        function increment() {
+        function increment()
+        {
             i++;
+            //document.writeln(i);
             let number = document.getElementById("number");
-            number.innerHTML = `<h2>${i}</h2>`;  // Исправление для корректной вставки HTML
+            number.innerHTML = `<h2>${i}</h2>`;
         }
-
-        function show_text() {
+        function show_text()
+        {
             let text = document.getElementById("text");
             let display_text = document.getElementById("display_text");
+            //<debugger>
             display_text.innerHTML = text.value;
+            //alert();
         }
-
-        function set_image() {
+        function set_init_path()
+        {
+            let file = document.getElementById("file");
+            file.value = window.location.pathname;
+            alert("set_init_path()");
+        }
+        function set_image()
+        {
             let image = document.getElementById("image");
             let path = document.getElementById("file");
-            let file = path.files[0];  // Получаем выбранный файл
-            if (file) {
-                let reader = new FileReader();
-                reader.onload = function (e) {
-                    image.src = e.target.result;  // Устанавливаем путь картинки как результат FileReader
-                };
-                reader.readAsDataURL(file);  // Читаем файл как Data URL
-            }
+            //let path = window.location.pathname;
+            //this.value = path;
+            let path_splitted = path.value.split('\\');
+            //console.log(path_splitted);
+            let file = path_splitted[path_splitted.length - 1];
+            //alert(file);
+            image.src = file;
         }
     </script>
 </body>
