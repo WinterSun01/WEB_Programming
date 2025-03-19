@@ -3,57 +3,78 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
+    <link rel="stylesheet" href="events.css">
     <title>Events</title>
 </head>
-<body>
-    <h1>Events</h1>
+<body onload="tick_timer()">
+    <div id="header">
+        <h1>Events</h1>
+        <div>
+            <img src="img/moon.png" id="switch" onclick="switch_button()">
+        </div>
+    </div>
     <div id="number" style="width:100px;height:50px;background-color:lightblue;" onclick="increment()">
+        <h2>Init</h2>
     </div>
 
     <input id="text" type="text" oninput="show_text()" />
     <input id="show" type="button" value="Show">
     <div id="display_text"></div>
 
-    <div style="display:grid; grid-gap:5px;">
-        <img id="image" src="" alt="Выберите картинку" style="width:200px;height:200px; border:solid 1px;">
-        <input id="file" type="file" onchange="set_image()" value="C:\" />
+    <!--<div style="display:grid; grid-gap:5px;">
+        <img	id="image"	src="" alt="Выберите картинку" style="width:200px;height:200px; border:solid 1px;">
+        <input	id="file"	type="file" onchange="set_image()" value="C:\" />
+    </div>-->
+    <!--<div id="dom" style="width:100px;height:50px;background-color:lightgray;">
+        <ul>
+            <li>Item1
+                <ol>
+                    <li>Red</li>
+                    <li>Green</li>
+                    <li>Blue</li>
+                </ol>
+            </li>
+            <li>Item2</li>
+            <li>Item3</li>
+        </ul>
+    </div>-->
+    <!--<div class="dom" style="width:100px;height:50px;background-color:lightgray;">
+        <ul>
+            <li>Class1
+                <ol>
+                    <li>Red</li>
+                    <li>Green</li>
+                    <li>Blue</li>
+                </ol>
+            </li>
+            <li>Class2</li>
+            <li>Class3</li>
+        </ul>
+    </div>-->
+    <!--<div id="dom" style="width:200px;height:100px;background-color:lightgreen;">
+
+    </div>-->
+
+    <hr>
+    <img src="img/padStart.png">
+    <h2>Date & Time</h2>
+    <hr>
+    <div id="date"></div>
+    <div id="time"></div>
+    <div id="weekday"></div>
+    <div id="show-date-container" style="width:100%;text-align:center;">
+        <input type="checkbox" id="show-date"><label for="show-date">Показать дату</label>
+    </div>
+    <div id="show-weekday-container" style="width:100%;text-align:center;">
+        <input type="checkbox" id="show-weekday"><label for="show-weekday">Показать день недели</label>
     </div>
 
-    <script>
-        var i = 0;
-        function increment()
-        {
-            i++;
-            //document.writeln(i);
-            let number = document.getElementById("number");
-            number.innerHTML = `<h2>${i}</h2>`;
-        }
-        function show_text()
-        {
-            let text = document.getElementById("text");
-            let display_text = document.getElementById("display_text");
-            //<debugger>
-            display_text.innerHTML = text.value;
-            //alert();
-        }
-        function set_init_path()
-        {
-            let file = document.getElementById("file");
-            file.value = window.location.pathname;
-            alert("set_init_path()");
-        }
-        function set_image()
-        {
-            let image = document.getElementById("image");
-            let path = document.getElementById("file");
-            //let path = window.location.pathname;
-            //this.value = path;
-            let path_splitted = path.value.split('\\');
-            //console.log(path_splitted);
-            let file = path_splitted[path_splitted.length - 1];
-            //alert(file);
-            image.src = file;
-        }
-    </script>
+    <hr>
+    <div id="date-and-time"></div>
+
+    <script type="text/javascript" src="events1.js"></script>
+    <script type="text/javascript" src="events2.js"></script>
+    <script type="text/javascript" src="switch_button.js"></script>
+    <script type="text/javascript" src="date_time.js"></script>
 </body>
 </html>

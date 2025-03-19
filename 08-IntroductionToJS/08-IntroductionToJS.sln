@@ -10,10 +10,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		arrays_homework.html = arrays_homework.html
 		datatypes.css = datatypes.css
 		datatypes.html = datatypes.html
+		data_time.js = data_time.js
+		events.css = events.css
 		events.html = events.html
+		events1.js = events1.js
+		events2.js = events2.js
 		index.html = index.html
 		intro.html = intro.html
 		math.html = math.html
+		switch_button.js = switch_button.js
 	EndProjectSection
 EndProject
 Global
