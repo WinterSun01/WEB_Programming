@@ -1,26 +1,31 @@
-﻿body 
-{
-
+﻿body {
 }
 
-#header 
-{
+#header {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-#switch 
-{
+#switch {
     width: 32px;
     height: 32px;
     margin: 24px;
 }
 
-#date, #time, #weekday 
-{
+#date, #time, #weekday {
     width: 100%;
     height: 50px;
     font-size: 32px;
     text-align: center;
+}
+
+#user-data > input {
+    font-size: 32px;
+}
+
+#difference {
+    width: 100%;
+    height: 50px;
+    background-color: lightblue;
 }

@@ -1,28 +1,34 @@
-// JavaScript source code
-var i = 0;
-function increment()
+//обработчики для чекбоксов
+const showDateCheckbox = document.getElementById('show-date');
+const showWeekdayCheckbox = document.getElementById('show-weekday');
+const dateElement = document.getElementById('date');
+const weekdayElement = document.getElementById('weekday');
+
+//для обновления отображаемых данных
+function updateDateAndTime()
 {
-	i++;
-	let number = document.getElementById("number");
-	number.innerHTML = `<h2>${i}</h2>`;
+    const currentDate = new Date();
+    const date = currentDate.toLocaleDateString();
+    const weekday = currentDate.toLocaleString('default', { weekday: 'long' });
+
+    if (showDateCheckbox.checked)
+    {
+        dateElement.textContent = date;
+    } else
+    {
+        dateElement.textContent = '';
+    }
+
+    if (showWeekdayCheckbox.checked)
+    {
+        weekdayElement.textContent = weekday;
+    } else {
+        weekdayElement.textContent = '';
+    }
 }
-function show_text()
-{
-	let text = document.getElementById("text");
-	let display_text = document.getElementById("display_text");
-	display_text.innerHTML = text.value;
-}
-function set_init_path()
-{
-	let file = document.getElementById("file");
-	file.value = window.location.pathname;
-	alert("set_init_path()");
-}
-function set_image()
-{
-	let image = document.getElementById("image");
-	let path = document.getElementById("file");
-	let path_splitted = path.value.split('\\');
-	let file = path_splitted[path_splitted.length - 1];
-	image.src = file;
-}
+
+//обработчики событий для чекбоксов
+showDateCheckbox.addEventListener('change', updateDateAndTime);
+showWeekdayCheckbox.addEventListener('change', updateDateAndTime);
+
+updateDateAndTime();
