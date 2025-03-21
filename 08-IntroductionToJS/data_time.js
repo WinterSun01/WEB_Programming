@@ -1,23 +1,22 @@
-﻿// JavaScript source code
-//alert("Date & Time");
-let current_time = new Date();
+﻿let current_time = new Date();
 let date_and_time = document.getElementById("date-and-time");
 date_and_time.innerHTML = `getDate():\t${current_time.getDate()};<br>`;
 date_and_time.append(`getTime():\t${current_time.getTime()};`);
 date_and_time.append(`getDay():\t${(new Date(2025, 03 - 1, 16)).toLocaleString("default", { weekday: "long" })};`);
 
-//const WEEK = [""]
-
-function tick_timer() {
+function tick_timer()
+{
 	let current_time = new Date();
-	if (document.getElementById("show-date").checked) {
+	if (document.getElementById("show-date").checked)
+	{
 		let yyyy = current_time.getFullYear();
 		let MM = checkNumber(current_time.getMonth() + 1);
 		let dd = checkNumber(current_time.getDate());
 		let date_string = `${yyyy}.${MM}.${dd}`;
 		document.getElementById("date").innerHTML = date_string;
 	}
-	else {
+	else
+	{
 		document.getElementById("date").innerHTML = "";
 	}
 
@@ -30,14 +29,16 @@ function tick_timer() {
 
 	let time_string = `${hh}:${mm}:${ss}`;
 	document.getElementById("time").innerHTML = time_string;
-	setTimeout(tick_timer, 1000);	//setTimeout(function_pointer, milliseconds)
+	setTimeout(tick_timer, 1000);
 }
 
-function checkNumber(i) {
+function checkNumber(i)
+{
 	return i < 10 ? "0" + i : i;
 }
 
-function start_timer() {
+function start_timer()
+{
 	let user_date_input = document.getElementById("user-date");
 	let user_time_input = document.getElementById("user-time");
 	let user_datetime_local = document.getElementById("user-datetime-local");
@@ -50,21 +51,23 @@ function start_timer() {
 	document.getElementById("user-values-date").innerHTML = user_date;
 	document.getElementById("user-values-time").innerHTML = user_time;
 	document.getElementById("user-datetime-local-values").innerHTML = user_datetime_local.value;
-	//document.getElementById("user-datetime-local-timestamp").innerHTML = new Date(user_datetime_local.value);
 	document.getElementById("user-datetime-local-timestamp").innerHTML = user_datetime_local.valueAsNumber;
 
-	if (start_timer_button.value === "Start" && user_date_input.value !== "" && user_time_input.value !== "") {
+	if (start_timer_button.value === "Start" && user_date_input.value !== "" && user_time_input.value !== "")
+	{
 		start_timer_button.value = "Stop";
 		user_date_input.disabled = user_time_input.disabled = user_datetime_local.disabled = true;
 		countdown_timer();
 	}
-	else {
+	else
+	{
 		start_timer_button.value = "Start";
 		user_date_input.disabled = user_time_input.disabled = false;
 	}
 }
 
-function countdown_timer() {
+function countdown_timer()
+{
 	let user_datetime = document.getElementById("user-datetime-local").valueAsNumber;
 	let current_time = new Date();
 	let timestamp = user_datetime - current_time;
