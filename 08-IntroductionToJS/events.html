@@ -39,7 +39,7 @@
     <div id="date-and-time"></div>
     <hr>
     <div id="user-data">
-        <input type="datetime-local" id="user-datetime-local" value="2025-03-24 12:00">
+        <input type="datetime-local" id="user-datetime-local" value="2027-03-24 14:40">
         <input type="button" id="start-timer" value="Start" onclick="start_timer()">
         <br>
         <div id="user-values-date"></div>
@@ -51,8 +51,23 @@
         <div id="user-timezone"></div>
         <div id="difference"></div>
         <div id="time-units"></div>
-        <div id="countdown-display"></div>
+        <!--<div id="countdown-display"></div>-->
 
+    </div>
+
+    <div id="display">
+        <div class="time-block">
+            <div id="hours-unit"        class="time-unit"></div>
+            <div id="hours-marker"      class="time-marker">Hours</div>
+        </div>
+        <div class="time-block">
+            <div id="minutes-unit"      class="time-unit"></div>
+            <div id="minutes-marker"    class="time-marker">Minutes</div>
+        </div>
+        <div class="time-block">
+            <div id="seconds-unit"      class="time-unit"></div>
+            <div id="seconds-marker"    class="time-marker">Seconds</div>
+        </div>
     </div>
 
     <script type="text/javascript" src="events1.js"></script>
