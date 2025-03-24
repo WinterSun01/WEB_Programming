@@ -36,3 +36,45 @@
     height: 50px;
     background-color: lightblue;
 }
+
+#countdown-display 
+{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+.time-block 
+{
+    background-color: deepskyblue;
+    color: blue;
+    width: 100px;
+    height: 150px;
+    text-align: center;
+    font-family: "Digital", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.time-value 
+{
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.time-label 
+{
+    background-color: #c41212;
+    color: white;
+    width: 100%;
+    font-size: 20px;
+    padding: 5px;
+    box-sizing: border-box;
+    flex-shrink: 1;
+}
+

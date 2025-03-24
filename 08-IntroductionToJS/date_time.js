@@ -44,7 +44,6 @@ function start_timer()
 
 	let start_timer_button = document.getElementById("start-timer");
 
-	document.getElementById("user-datetime-local-values").innerHTML = user_datetime_local.value;
 	document.getElementById("user-datetime-local-timestamp").innerHTML = Math.trunc(user_datetime_local.valueAsNumber / 1000);
 
 	if (start_timer_button.value === "Start" && user_datetime_local !== "")
@@ -62,72 +61,86 @@ function start_timer()
 
 function countdown_timer()
 {
-	const SECONDS_IN_MINUTE = 60;
-	const SECONDS_IN_HOUR = 3600;
-	const SECONDS_IN_DAY = 86400;
-	const SECONDS_IN_WEEK = 86400 * 7;
-	const DAYS_IN_MONTH = 365 / 12;
-	const SECONDS_IN_MONTH = DAYS_IN_MONTH * SECONDS_IN_DAY;
-	const SECONDS_IN_YEAR = SECONDS_IN_DAY * 365 + SECONDS_IN_HOUR * 6;
+    const SECONDS_IN_MINUTE = 60;
+    const SECONDS_IN_HOUR = 3600;
+    const SECONDS_IN_DAY = 86400;
+    const SECONDS_IN_WEEK = SECONDS_IN_DAY * 7;
+    const DAYS_IN_MONTH = 365 / 12;
+    const SECONDS_IN_MONTH = DAYS_IN_MONTH * SECONDS_IN_DAY;
+    const SECONDS_IN_YEAR = SECONDS_IN_DAY * 365 + SECONDS_IN_HOUR * 6;
 
-	let user_datetime = +new Date(document.getElementById("user-datetime-local").value);
-	let current_time = +new Date();
-	let timezone_offset = new Date().getTimezoneOffset() / 60;
+    let user_datetime = new Date(document.getElementById("user-datetime-local").value);
+    let current_time = new Date();
 
-	document.getElementById("current-timezone").innerHTML = `Current timezone: ${timezone_offset}`
-	document.getElementById("user-timezone").innerHTML = `User timezone: ${document.getElementById("user-datetime-local").valueAsDate}`
-	current_time = Math.trunc(current_time / 1000);
-	user_datetime = Math.trunc(user_datetime / 1000);
-	document.getElementById("current-timestamp").innerHTML = current_time;
-	let timestamp = user_datetime - current_time;
-	let time_of_day = timestamp % SECONDS_IN_DAY;
+    let user_timestamp = Math.trunc(user_datetime.getTime() / 1000);
+    let current_timestamp = Math.trunc(current_time.getTime() / 1000);
 
-	document.getElementById("difference").innerHTML = timestamp;
-	////////////////////////////////////////////////////////////////
-	////////////////////////////////////////////////////////////////
+    let timestamp = user_timestamp - current_timestamp;
 
-	let years = Math.trunc(timestamp / SECONDS_IN_YEAR);
-	if (years > 0)
-	{
-		timestamp = Math.trunc(timestamp % (years * SECONDS_IN_YEAR));
-	}
+    if (timestamp <= 0) 
+    {
+        document.getElementById("time-units").innerHTML = "00:00:00";
+        document.getElementById("countdown-display").innerHTML = "";
+        return;
+    }
 
-	let monthes = Math.trunc(timestamp / SECONDS_IN_MONTH);
-	if (monthes > 0)
-	{
-		timestamp = Math.trunc(timestamp % (monthes * SECONDS_IN_MONTH));
-	}
+    let years = Math.trunc(timestamp / SECONDS_IN_YEAR);
+    timestamp %= SECONDS_IN_YEAR;
 
-	let weeks = Math.trunc(timestamp / SECONDS_IN_WEEK);
-	if (weeks > 0)
-	{
-		timestamp = Math.trunc(timestamp % (weeks * SECONDS_IN_WEEK));
-	}
+    let months = Math.trunc(timestamp / SECONDS_IN_MONTH);
+    timestamp %= SECONDS_IN_MONTH;
 
-	let days = Math.trunc(timestamp / SECONDS_IN_DAY);
-	if (days > 0)
-	{
-		timestamp = Math.trunc(timestamp % (days * SECONDS_IN_DAY));
-	}
+    let weeks = Math.trunc(timestamp / SECONDS_IN_WEEK);
+    timestamp %= SECONDS_IN_WEEK;
 
-	let hours = Math.trunc(time_of_day / SECONDS_IN_HOUR);
-	if (hours > 0)
-	{
-		time_of_day = Math.trunc(time_of_day % (hours * SECONDS_IN_HOUR));
-	}
+    let days = Math.trunc(timestamp / SECONDS_IN_DAY);
+    timestamp %= SECONDS_IN_DAY;
 
-	let minutes = Math.trunc(time_of_day / SECONDS_IN_MINUTE);
-	if (minutes > 0)
-	{
-		time_of_day = Math.trunc(time_of_day % (minutes * SECONDS_IN_MINUTE));
-	}
+    let hours = Math.trunc(timestamp / SECONDS_IN_HOUR);
+    timestamp %= SECONDS_IN_HOUR;
 
-	let seconds = Math.trunc(time_of_day);
+    let minutes = Math.trunc(timestamp / SECONDS_IN_MINUTE);
+    let seconds = timestamp % SECONDS_IN_MINUTE;
 
+    let formatted_date = `${user_datetime.getFullYear()}-${String(user_datetime.getMonth() + 1).padStart(2, "0")}-${String(user_datetime.getDate()).padStart(2, "0")}`;
+    let weekday = user_datetime.toLocaleString("en-US", { weekday: "long" });
+    let formatted_time = `${String(user_datetime.getHours()).padStart(2, "0")}:${String(user_datetime.getMinutes()).padStart(2, "0")}`;
 
-	document.getElementById("time-units").innerHTML =
-		`${years} years, ${monthes} monthes, ${weeks} weeks, ${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
+    document.getElementById("user-values-date").innerHTML = `User Date: ${formatted_date} ${weekday} ${formatted_time}`;
+    document.getElementById("user-datetime-local-timestamp").innerHTML = `User Timestamp: ${user_timestamp}`;
+    document.getElementById("current-timestamp").innerHTML = `Current Timestamp: ${current_timestamp}`;
+    document.getElementById("difference").innerHTML = `Difference: ${user_timestamp - current_timestamp} seconds`;
 
-	setTimeout(countdown_timer, 1000);
+    document.getElementById("time-units").innerHTML =
+        `${years} years, ${months} months, ${weeks} weeks, ${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
+
+    let timeDisplay = "";
+    function createTimeBlock(value, label)
+    {
+        return `<div class="time-block">
+                    <div class="time-value">${String(value).padStart(2, "0")}</div>
+                    <div class="time-label">${label}</div>
+                </div>`;
+    }
+
+    if (years > 0) timeDisplay += createTimeBlock(years, "Years");
+    if (months > 0) timeDisplay += createTimeBlock(months, "Months");
+    if (weeks > 0) timeDisplay += createTimeBlock(weeks, "Weeks");
+    if (days > 0) timeDisplay += createTimeBlock(days, "Days");
+    if (hours > 0) timeDisplay += createTimeBlock(hours, "Hours");
+    if (minutes > 0) timeDisplay += createTimeBlock(minutes, "Minutes");
+    if (seconds > 0 || timeDisplay === "") timeDisplay += createTimeBlock(seconds, "Seconds");
+
+    document.getElementById("countdown-display").innerHTML = timeDisplay;
+
+    setTimeout(countdown_timer, 1000);
 }
+
+
+
+
+
+
+
+
 
