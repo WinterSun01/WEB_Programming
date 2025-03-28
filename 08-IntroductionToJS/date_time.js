@@ -137,7 +137,6 @@ function checkNumber(i)
 //}
 function start_timer()
 {
-	
 	let user_datetime_local = document.getElementById("user-datetime-local");
 
 	let start_timer_button = document.getElementById("start-timer");
@@ -148,7 +147,6 @@ function start_timer()
 	if (start_timer_button.value === "Start" && user_datetime_local !== "")
 	{
 		start_timer_button.value = "Stop";
-		user_datetime_local.disabled = true;
 		countdown_timer();
 	}
 	else
@@ -170,7 +168,7 @@ function countdown_timer()
 	let user_datetime = +new Date(document.getElementById("user-datetime-local").value);
 	let current_time = +new Date();
 	let timezone_offset = new Date().getTimezoneOffset() / 60;
-	
+
 	document.getElementById("current-timezone").innerHTML = `Current timezone: ${timezone_offset}`
 	document.getElementById("user-timezone").innerHTML = `User timezone: ${document.getElementById("user-datetime-local").valueAsDate}`
 	current_time = Math.trunc(current_time / 1000);
@@ -189,23 +187,18 @@ function countdown_timer()
 	{
 		timestamp = Math.trunc(timestamp % (years * SECONDS_IN_YEAR));
 		let years_unit = document.getElementById("years-unit");
-		if (document.getElementById("years-unit") == null)
+		if (years == null)
 			display.prepend(createTimeBlock("years", years));
 	}
 	else removeTimeBlock("years");
 
-	let debug_display = document.getElementById("display");
-	console.log(debug_display);
 
 	let months = Math.trunc(timestamp / SECONDS_IN_MONTH);
-	if (months > 0)
-	{
+	if (months > 0) {
 		timestamp = Math.trunc(timestamp % (months * SECONDS_IN_MONTH));
 		let months_unit = document.getElementById("months-unit");
-		if (months_unit == null)
-		{
+		if (months_unit == null) {
 			let years_unit = document.getElementById("years-unit");
-			/*if (years_unit == null) display.append*/
 		}
 	}
 
@@ -235,13 +228,15 @@ function countdown_timer()
 
 	let seconds = Math.trunc(time_of_day);
 
+	let debug_display = document.getElementById("display");
+	console.log(debug_display.children.length);
+
 	document.getElementById("hours-unit").innerHTML = hours;
 	document.getElementById("minutes-unit").innerHTML = minutes;
 	document.getElementById("seconds-unit").innerHTML = seconds;
 
-
 	document.getElementById("time-units").innerHTML =
-		`${years} years, ${months} months, ${weeks} weeks, ${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
+		`${years} years, ${months} monthes, ${weeks} weeks, ${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
 
 	if (document.getElementById("start-timer").value === 'Stop')
 		setTimeout(countdown_timer, 1000);
@@ -262,12 +257,11 @@ function createTimeBlock(name, value)
 	marker.className = "time-marker";
 	marker.innerHTML = name;
 
-	time_block.prepend(unit);
+	time_block.append(unit);
 	time_block.append(marker);
 
 	return time_block;
 }
-
 function removeTimeBlock(name)
 {
 	let unit = document.getElementById(`${name}-unit`);

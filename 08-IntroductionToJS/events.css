@@ -1,4 +1,4 @@
-﻿body 
+﻿﻿body 
 {
 
 }
@@ -78,30 +78,33 @@
     flex-shrink: 1;
 }*/
 
-#display
+#display 
 {
-    display:flex;
-    justify-content:space-around;
+    display: flex;
+    justify-content: space-around;
 }
-.time-block
+
+.time-block 
 {
-    width:90px;
-    height:120px;
-    text-align:center;
-    font-size:32px;
-    border:solid 2px;
-    border-radius:8px;
+    width: 90px;
+    height: 120px;
+    text-align: center;
+    font-size: 32px;
+    border: solid 2px;
+    border-radius: 8px;
 }
+
 .time-unit 
 {
-    height:80px;
+    height: 80px;
     background-color: blue;
     color: white;
-    padding:24px 0 0 0;
+    padding: 16px 0 0 0;
 }
+
 .time-marker 
 {
     background-color: red;
     color: white;
-    font-size:24px;
+    font-size: 24px;
 }
