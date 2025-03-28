@@ -1,4 +1,4 @@
-﻿﻿body 
+﻿body 
 {
 
 }
@@ -37,47 +37,6 @@
     background-color: lightblue;
 }
 
-/*#countdown-display 
-{
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    padding: 20px;
-}
-
-.time-block 
-{
-    background-color: deepskyblue;
-    color: blue;
-    width: 100px;
-    height: 150px;
-    text-align: center;
-    font-family: "Digital", sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-}
-
-.time-value 
-{
-    font-size: 48px;
-    font-weight: bold;
-}
-
-.time-label 
-{
-    background-color: #c41212;
-    color: white;
-    width: 100%;
-    font-size: 20px;
-    padding: 5px;
-    box-sizing: border-box;
-    flex-shrink: 1;
-}*/
-
 #display 
 {
     display: flex;
@@ -86,25 +45,37 @@
 
 .time-block 
 {
-    width: 90px;
-    height: 120px;
+    width: 100px;
+    height: 150px;
     text-align: center;
-    font-size: 32px;
+    font-size: 48px;
+    font-weight: bold;
     border: solid 2px;
     border-radius: 8px;
+    background-color: deepskyblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .time-unit 
 {
     height: 80px;
-    background-color: blue;
-    color: white;
-    padding: 16px 0 0 0;
+    color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
 }
 
 .time-marker 
 {
-    background-color: red;
+    background-color: #c41212;
     color: white;
     font-size: 24px;
+    width: 100%;
+    text-align: center;
+    padding: 5px 0;
 }
+

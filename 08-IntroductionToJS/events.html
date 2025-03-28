@@ -1,5 +1,4 @@
 ﻿<!DOCTYPE html>
-
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
@@ -39,34 +38,42 @@
     <div id="date-and-time"></div>
     <hr>
     <div id="user-data">
-        <input type="datetime-local" id="user-datetime-local" value="2027-03-24 14:40">
+        <input type="datetime-local" id="user-datetime-local" value="2027-03-28 17:40">
         <input type="button" id="start-timer" value="Start" onclick="start_timer()">
         <br>
-        <div id="user-values-date"></div>
-        <div id="user-values-time"></div>
-        <div id="user-datetime-local-values"></div>
-        <div id="user-datetime-local-timestamp"></div>
-        <div id="current-timestamp"></div>
-        <div id="current-timezone"></div>
-        <div id="user-timezone"></div>
-        <div id="difference"></div>
-        <div id="time-units"></div>
-        <!--<div id="countdown-display"></div>-->
-
+        <div><strong>Дата и время:</strong> <span id="user-datetime-local-values"></span></div>
+        <div><strong>Текущий timestamp:</strong> <span id="user-datetime-local-timestamp"></span></div>
+        <div><strong>Текущий timestamp:</strong> <span id="current-timestamp"></span></div>
+        <div><strong>Часовой пояс пользователя:</strong> <span id="user-timezone"></span></div>
+        <div><strong>Разница во времени:</strong> <span id="difference"></span></div>
+        <div><strong>Единицы времени:</strong> <span id="time-units"></span></div>
     </div>
 
+    <hr>
     <div id="display">
         <div class="time-block">
-            <div id="hours-unit"        class="time-unit"></div>
-            <div id="hours-marker"      class="time-marker">Hours</div>
+            <div id="years-unit" class="time-unit"></div>
+            <div id="years-marker" class="time-marker">Years</div>
         </div>
         <div class="time-block">
-            <div id="minutes-unit"      class="time-unit"></div>
-            <div id="minutes-marker"    class="time-marker">Minutes</div>
+            <div id="months-unit" class="time-unit"></div>
+            <div id="months-marker" class="time-marker">Months</div>
         </div>
         <div class="time-block">
-            <div id="seconds-unit"      class="time-unit"></div>
-            <div id="seconds-marker"    class="time-marker">Seconds</div>
+            <div id="weeks-unit" class="time-unit"></div>
+            <div id="weeks-marker" class="time-marker">Weeks</div>
+        </div>
+        <div class="time-block">
+            <div id="hours-unit" class="time-unit"></div>
+            <div id="hours-marker" class="time-marker">Hours</div>
+        </div>
+        <div class="time-block">
+            <div id="minutes-unit" class="time-unit"></div>
+            <div id="minutes-marker" class="time-marker">Minutes</div>
+        </div>
+        <div class="time-block">
+            <div id="seconds-unit" class="time-unit"></div>
+            <div id="seconds-marker" class="time-marker">Seconds</div>
         </div>
     </div>
 
