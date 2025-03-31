@@ -1,0 +1,11 @@
+﻿div
+{
+    border:solid 1px;
+    width: 50px;
+}
+
+.sequence
+{
+    display:flex;
+    justify-content:space-between;
+}
