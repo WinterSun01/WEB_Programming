@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script>
+        class Point
+        {
+            #x;
+            #y;
+            constructor(x, y)
+            {
+                this.#x = x;
+                this.#y = y;
+            }
+            
+            get x()
+            {
+                return this.#x;
+            }
+            get y()
+            {
+                return this.#y;
+            }
+            set x(value)
+            {
+                this.#x = value;
+            }
+            set y(value)
+            {
+                this.#y = value;
+            }
+
+            print()
+            {
+                document.write(`X = ${this.#x}, Y = ${this.#y};`);
+            }
+        }
+        console.log(Point);
+        let A = new Point(2, 3);
+        A.print();
+        document.write(`<h3>Encapsulation:</h3>`);
+        document.write(`<h3>${A.x}</h3>`);
+        document.write(`<h3>${A.y}</h3>`);
+
+        A.x = 100;
+        A.y = 200;
+    </script>
+</body>
+</html>
