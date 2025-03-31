@@ -21,6 +21,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		intro.html = intro.html
 		math.html = math.html
 		switch_button.js = switch_button.js
+		test.css = test.css
+		test.html = test.html
+		test.js = test.js
 	EndProjectSection
 EndProject
 Global

@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест: Интересные факты о странах</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+
+    <h1>Тест: Интересные факты о странах</h1>
+    <form id="quiz-form">
+        <div class="question">
+            <p>1. В какой стране запрещено жевать жвачку?</p>
+            <div class="answers">
+                <label><input type="radio" name="q1" value="a"> Швеция</label>
+                <label><input type="radio" name="q1" value="b"> Сингапур</label>
+                <label><input type="radio" name="q1" value="c"> Канада</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>2. Какая страна не имеет официальной столицы?</p>
+            <div class="answers">
+                <label><input type="radio" name="q2" value="a"> Австралия</label>
+                <label><input type="radio" name="q2" value="b"> Швейцария</label>
+                <label><input type="radio" name="q2" value="c"> Норвегия</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>3. В какой стране можно отправить письмо Санта-Клаусу, и он ответит?</p>
+            <div class="answers">
+                <label><input type="radio" name="q3" value="a"> Канада</label>
+                <label><input type="radio" name="q3" value="b"> Финляндия</label>
+                <label><input type="radio" name="q3" value="c"> Исландия</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>4. В какой стране находится самое большое количество замков?</p>
+            <div class="answers">
+                <label><input type="radio" name="q4" value="a"> Франция</label>
+                <label><input type="radio" name="q4" value="b"> Германия</label>
+                <label><input type="radio" name="q4" value="c"> Чехия</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>5. Где находится самый высокий водопад в мире?</p>
+            <div class="answers">
+                <label><input type="radio" name="q5" value="a"> Венесуэла</label>
+                <label><input type="radio" name="q5" value="b"> Бразилия</label>
+                <label><input type="radio" name="q5" value="c"> США</label>
+            </div>
+        </div>
+
+        <button type="button" onclick="checkAnswers()">Проверить</button>
+    </form>
+
+    <p id="result"></p>
+
+    <script src="test.js"></script>
+
+</body>
+</html>

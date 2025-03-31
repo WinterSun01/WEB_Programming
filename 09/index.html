@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script>
+        let obj1 = new Object();
+        let obj2 = {}; //Литерал объекта
+
+        let red = new Object();
+        red["name"] = "Red";
+        red["value"] = "#ff000000";
+        red["example"] = "car";
+        console.log(red);
+
+        let menu = {};
+        menu.width = 300;
+        menu.height = 200;
+        menu.title = "MainMenu";
+        console.log(menu);
+        delete menu.height;
+        console.log(menu);
+        menu.items = 5;
+        console.log(menu);
+        console.log("------------------------------");
+        let counter = 0;
+        for (let i in menu)
+        {
+            console.log(`${counter++} - ${menu[i]}`);
+        }
+        console.log("------------------------------");
+        console.log(`Count:${counter}`);
+        console.log(`Length:${menu.length}`);
+
+        console.log(`Menu keys:${Object.keys(menu)}`)
+        Object.keys(menu).forEach(function (key)
+        {
+            document.write(key + ":" + menu[key] + '<br>');
+        });
+
+        console.log(menu.__proto__);
+
+        let obj =
+        {
+            name: "Name",
+            colors: { first: "black", second: "white" },
+            color: ["red", "green", "blue"],
+            hello: function () { document.write("Привет!"); }
+        };
+        document.write(obj);
+        console.log(obj);
+        obj.hello();
+
+        document.write(Object.keys(obj.color));
+        document.write(`<br>Filter:<br>`);
+        document.write(obj.color.filter(function (elem) { return elem.length < 5 }));
+
+        //let arr = obj.color.map(function (elem) { return elem });
+        let arr = obj.color.map(elem => elem.toUpperCase());
+        console.log(arr);
+    </script>
+</body>
+</html>
