@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<group> <!--Root Element-->
+	<!--Tree Elements-->
+	<student atribute="value">
+		<!--ElementAttributes-->
+		<last_name>
+			Pinkman
+		</last_name>
+		<first_name>
+			Jessi
+		</first_name>
+		<age>
+			22
+		</age>
+		<speciality>
+			Chemistry
+		</speciality>
+	</student>
+	<teacher>
+		<last_name>White</last_name>
+		<first_name>Walter</first_name>
+		<age>50</age>
+		<speciality>Chemistry</speciality>
+	</teacher>
+</group>
