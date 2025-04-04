@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<group> <!--Root Element-->
-	<!--Tree Elements-->
-	<student atribute="value">
+<group name="WW_220">
+	<!--RootElement-->
+	<!--TreeElements-->
+	<student attribute="value">
 		<!--ElementAttributes-->
 		<last_name>
 			Pinkman
