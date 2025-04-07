@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+</head>
+<body>
+    <h1>JQuery</h1>
+    <p>
+        $(selector).action();
+        $(this).hide() - позволяет спрятать текущий элемент;
+        $("p") - спрятать все абзацы;
+    </p>
+    <h2>Selectors</h2>
+    <ul>
+        <li><code>"*"</code> - все элементы;</li>
+        <li><code>this</code>	- означает текущий элемент;</li>
+        <li><code>"ul li:first"</code>	- спрятать первый элемент списка;</li>
+        <li><code>"ul li:parent"</code> - спрятать родительский элемент;</li>
+        <li><code>"[attrib]"</code>	- спрятать все элементы с заданным атрибутом;</li>
+        <li><code>":button"</code>	- скрывает все элементы типа <code>button</code> и <code>&lt;input type="button"&gt;</code></li>
+        <li><code></code>	- </li>
+    </ul>
+    <button id="hide">Hide</button>
+    <input id="show" type="button" name="name" value="Show" />
+    <button id="tumbler">Tumbler</button>
+    <button id="stop">Stop</button>
+    <h2>Effects</h2>
+    <ul>
+        <li>Show/Hide</li>
+        <li>
+            Fade
+            <ul>
+                <li><code>fadeIn()</code>;</li>
+                <li><code>fadeOut()</code>;</li>
+                <li><code>fadeToggle()</code>;</li>
+                <li><code>fadeTo()</code> - позволяет задать opacity (уровень непрозрачности);</li>
+            </ul>
+        </li>
+        <li>
+            Slide
+            <ul>
+                <li><code>slideDown()</code></li>
+                <li><code>slideUp()</code></li>
+                <li><code>slideToggle()</code></li>
+            </ul>
+        </li>
+        <li>Animate</li>
+        <li>stop() - останавливает все анимации</li>
+        <li>Callback</li>
+        <li>Chaining</li>
+    </ul>
+
+    <h2>JQuery Events</h2>
+    <ul>
+        <li>
+            Mouse events:
+            <ul style="list-style-type:none;">
+                <li><code>clieck()</code></li>
+                <li><code>dblclieck()</code></li>
+                <li><code>mouseentr()/hover()</code></li>
+                <li><code>mouseleave()</code></li>
+            </ul>
+        </li>
+        <li>
+            Keyboard events:
+            <ul style="list-style-type:none;">
+                <li><code>keydown()</code></li>
+                <li><code>keyup()</code></li>
+                <li><code>keypress()</code></li>
+            </ul>
+        </li>
+        </li>
+        <li>
+            Form events:
+            <ul style="list-style-type:none;">
+                <li><code>submit()</code></li>
+                <li><code>change()</code></li>
+                <li><code>focus()</code></li>
+                <li><code>blur()</code></li>
+            </ul>
+        </li>
+        <li>
+            Document/Window events:
+            <ul style="list-style-type:none;">
+                <li><code>load()</code></li>
+                <li><code>resize()</code></li>
+                <li><code>scroll()</code></li>
+                <li><code>unload()</code></li>
+            </ul>
+        </li>
+    </ul>
+
+    <table>
+        <caption>Таблица 1 - Дополнительные наборы команд</caption>
+        <tr class="header">
+            <th>Процессор</th>
+            <th>Год выпуска</th>
+            <th>x86-64</th>
+        </tr>
+        <!-- --------------------------------------------------- -->
+        <tr class="delimiter">
+            <th colspan="3">Intel</th>
+        </tr>
+        <tr>
+            <td class="row-header">Pentium</td>
+            <td class="year">1993</td>
+            <td></td>
+        </tr>
+        <tr class="x86-64">
+            <td class="row-header">Pentium 4</td>
+            <td class="year">2004</td>
+            <td>x</td>
+        </tr>
+        <tr class="x86-64">
+            <td class="row-header">Core 2 Duo</td>
+            <td rowspan="2">2007</td>
+            <td>x</td>
+        </tr>
+        <tr class="x86-64">
+            <td class="row-header">Core 2 Quad</td>
+            <!--<td>2007</td>-->
+            <td>x</td>
+        </tr>
+        <tr>
+            <td class="row-header">Pentium 4 Northwood</td>
+            <td class="year">1993</td>
+            <td></td>
+        </tr>
+        <tr class="x86-64">
+            <td class="row-header">Core i9</td>
+            <td class="year">2009</td>
+            <td>x</td>
+        </tr>
+
+    </table>
+
+    <!--<form action="/" method="post">
+        <input type="text" placeholder="Full name">
+        <input type="email" placeholder="E-mail">
+        <input type="tel" placeholder="Phone number" />
+    </form>-->
+    <div id="slide-up" style="background-color:black; color:white; width:50px;height:50px;margin:50px;">DIV</div>
+    <p id="slide-down" style="background-color:black; color:white; width:50px;height:50px;margin:50px;">P</p>
+    <div id="animate" style="background-color:black; color:white; width:50px;height:50px;margin:50px;">DIV</div>
+    <a href="google.ru" target="_blank">Google</a>
+    <a href="yandex.ru">Yandex</a>
+    <script src="script.js"></script>
+</body>
+</html>
